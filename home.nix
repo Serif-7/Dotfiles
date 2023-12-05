@@ -27,14 +27,15 @@
       helix
       fish
       eza
-      godot_4
       obsidian
       mullvad-vpn
       steam
+      spotify
 
       # Dev Tools
       git
-      gh
+      nim2
+      godot_4
 
       # Network Tools
       httpie
