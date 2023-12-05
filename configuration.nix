@@ -102,18 +102,10 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-
     neovim
-    discord
     helix
     fish
-    eza
-    godot_4
-    obsidian
-    mullvad-vpn
-
     git
-    gh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

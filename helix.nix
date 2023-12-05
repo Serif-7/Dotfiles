@@ -1,13 +1,13 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  home.sessionVariables.EDITOR = lib.getExe config.programs.helix.package;
+  # home.sessionVariables.EDITOR = lib.getExe config.programs.helix.package;
 
   programs.helix = {
     enable = true;
 
     settings = {
-      theme = "catppuccin_macchiato";
+      theme = "kanagawa";
 
       editor = {
         line-number = "relative";
@@ -54,12 +54,12 @@
       language = [
         {
           name = "nix";
-          language-server.command = lib.getExe' inputs.nil.packages.${pkgs.system}.default "nil";
+          # language-server.command = lib.getExe' inputs.nil.packages.${pkgs.system}.default "nil";
         }
         { name = "haskell";
-          config = {
-             haskell.formattingProvider = "fourmolu";
-          };
+          # config = {
+          #    haskell.formattingProvider = "fourmolu";
+          # };
         }
         {
           name = "cabal";
@@ -68,12 +68,12 @@
           file-types = ["cabal"];
           roots = ["*.cabal"];
           comment-token = "--";
-          language-server = { command = "haskell-language-server-wrapper"; args = ["--lsp"]; };
+          # language-server = { command = "haskell-language-server-wrapper"; args = ["--lsp"]; };
           indent = { tab-width = 2; unit = "  "; };
         }
         {
           name = "java";
-          language-server.command = lib.getExe' pkgs.jdt-language-server "jdt-language-server";
+          # language-server.command = lib.getExe' pkgs.jdt-language-server "jdt-language-server";
         }
       ];
     };

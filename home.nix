@@ -59,11 +59,5 @@
     
     ];
 
-    shellAliases = {
-
-      l = "eza";
-      
-    };
-
   };
 }
