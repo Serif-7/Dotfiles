@@ -4,7 +4,6 @@
   imports = [
   ];
 
-  home-manager.users.daniel = {
     /* The home.stateVersion option does not have a default and must be set */
     home.stateVersion = "18.09";
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
@@ -31,15 +30,14 @@
       burpsuite
       hashcat
       john
-      metasploit-framework
+      metasploit
       sqlmap
       aircrack-ng
-      wifite
-      hydra
+      wifite2
+      thc-hydra
       wireshark
       
     ];
 
     
-  };
 }
