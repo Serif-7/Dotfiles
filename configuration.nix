@@ -84,16 +84,12 @@
     isNormalUser = true;
     description = "Daniel";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
     packages = with pkgs; [
       firefox
     #  thunderbird
     ];
   };
   
-  # Put the basic nix directories in fish's PATH
-  programs.fish.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
