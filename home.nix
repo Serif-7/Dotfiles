@@ -20,6 +20,7 @@
       unzip
       zip
       xdg-utils
+      binutils
 
       # User Programs
       neovim
@@ -28,14 +29,46 @@
       fish
       eza
       obsidian
+      calibre
       mullvad-vpn
       steam
       spotify
+      qbittorrent
+      alacritty
+      anki
+      mpv
+      du-dust
+      fzf
+      ripgrep
+      tealdeer
+      bottom
+      gping
+      procs
+      zoxide
+      zathura
+      most
+      bat
+      zellij
+      nyxt
+      pandoc
+      tor-browser
+      libsForQt5.konversation
+      neofetch
+      chromium
+      foliate
+      youtube-dl
+      blender
+      
 
       # Dev Tools
       git
       nim2
       godot_4
+      love
+      rustc
+      cargo
+      gcc
+      trenchbroom
 
       # Network Tools
       httpie
@@ -44,6 +77,7 @@
       socat
       wget
       curl
+      dogdns
 
       # Hacker Tools
       nmap
@@ -57,8 +91,15 @@
       aircrack-ng
       wifite2
       thc-hydra
+      imhex
     
     ];
+
+    sessionVariables = {
+      EDITOR = "hx";
+      TERMINAL = "alacritty";
+      PAGER = "most";
+    };
 
   };
 }
