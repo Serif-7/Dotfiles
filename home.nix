@@ -5,6 +5,7 @@
   imports = [
     .configs//helix.nix
     .configs/fish.nix
+    .configs/tealdeer.nix
   ];
 
   #set shell to fish
@@ -61,8 +62,8 @@
       foliate
       youtube-dl
       blender
+      wl-clipboard
       
-
       # Dev Tools
       git
       nim2
