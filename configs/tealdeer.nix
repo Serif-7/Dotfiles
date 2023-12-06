@@ -26,7 +26,7 @@
           foreground = "cyan";
           underline = false;
           bold = false;
-          italic = false
+          italic = false;
         };
         example_variable = {
           foreground = "cyan";

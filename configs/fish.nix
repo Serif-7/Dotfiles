@@ -10,8 +10,14 @@
     '';
 
     shellAliases = {
-      l = "eza";
+      ls = "eza";
       "..." = "cd ../..";
+      grep = "rg";
+      ping = "gping";
+      ps = "procs";
+      find = "fd";
+      cat = "bat -p";
+      stats = "bottom";
     };
   };
 }

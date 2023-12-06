@@ -84,11 +84,14 @@
     isNormalUser = true;
     description = "Daniel";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
     packages = with pkgs; [
       firefox
     #  thunderbird
     ];
   };
+
+  programs.fish.enable = true;
   
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

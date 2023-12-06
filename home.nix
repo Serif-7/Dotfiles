@@ -3,13 +3,10 @@
 
 {
   imports = [
-    .configs//helix.nix
-    .configs/fish.nix
-    .configs/tealdeer.nix
+    ./configs/helix.nix
+    ./configs/fish.nix
+    ./configs/tealdeer.nix
   ];
-
-  #set shell to fish
-  users.users.daniel.shell = pkgs.fish;
 
   home = {
     /* The home.stateVersion option does not have a default and must be set */
