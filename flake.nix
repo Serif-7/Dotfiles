@@ -21,7 +21,8 @@
     nixosConfigurations.Yeats = nixpkgs.lib.nixosSystem {
       modules = [ 
       
-      ./configuration.nix 
+      ./configuration.nix
+      ./configs/steam.nix
       
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true; # Global nixpkgs instance
