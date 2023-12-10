@@ -6,7 +6,11 @@
     ./configs/helix.nix
     ./configs/fish.nix
     ./configs/tealdeer.nix
+    ./configs/alacritty.nix
+    ./configs/zathura.nix
   ];
+
+  programs.home-manager.enable = true;
 
   home = {
     /* The home.stateVersion option does not have a default and must be set */
@@ -60,6 +64,7 @@
       youtube-dl
       blender
       wl-clipboard
+      home-manager # standalone tool for managing HM config
       
       # Dev Tools
       git
