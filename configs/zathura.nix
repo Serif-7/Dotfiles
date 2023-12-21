@@ -34,6 +34,10 @@ in {
       completion-highlight-bg =  colors.kanagawa.bg;
       recolor-lightcolor = colors.kanagawa.bg;
       recolor-darkcolor = colors.kanagawa.white;
+
+      
+      recolor = true;
+      toggle_fullscreen = true;
     };
   };
 }

@@ -1,4 +1,4 @@
-{configs, ...}:
+{config, ...}:
 
 {
   programs.tealdeer = {

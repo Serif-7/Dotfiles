@@ -22,7 +22,8 @@ in {
           y = 25;
         };
         dynamic_padding = true;
-        decorations = "none";
+        #decorations = "None"
+        decorations = "Full";
       };
 
       cursor = {

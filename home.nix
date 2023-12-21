@@ -65,6 +65,8 @@
       blender
       wl-clipboard
       home-manager # standalone tool for managing HM config
+      focuswriter
+      libreoffice
       
       # Dev Tools
       git
@@ -75,6 +77,8 @@
       cargo
       gcc
       trenchbroom
+      docker
+      python3
 
       # Network Tools
       httpie

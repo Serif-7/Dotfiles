@@ -15,6 +15,8 @@
     extra-experimental-features = nix-command flakes
     '';
 
+  virtualisation.docker.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -88,7 +90,7 @@
   users.users.daniel = {
     isNormalUser = true;
     description = "Daniel";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.fish;
     packages = with pkgs; [
       firefox
