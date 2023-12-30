@@ -67,6 +67,13 @@
       home-manager # standalone tool for managing HM config
       focuswriter
       libreoffice
+      uxn
+      openmw
+      portmod
+
+      # Art Tools
+      krita
+      aseprite
       
       # Dev Tools
       git
