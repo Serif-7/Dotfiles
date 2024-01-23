@@ -70,6 +70,7 @@
       uxn
       openmw
       portmod
+      libretro.tic80
 
       # Art Tools
       krita
@@ -82,10 +83,18 @@
       love
       rustc
       cargo
-      gcc
+      libgcc
       trenchbroom
       docker
       python3
+      lua
+      lua-language-servers
+      make
+      cmake
+      ruby
+
+      # Libraries
+      libglvnd
 
       # Network Tools
       httpie

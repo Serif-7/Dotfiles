@@ -1,0 +1,7 @@
+{configs, ...}
+
+
+
+programs.firefox.profiles = {
+
+}
