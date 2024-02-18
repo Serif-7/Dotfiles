@@ -26,6 +26,7 @@
       zip
       xdg-utils
       binutils
+      gparted
 
       # User Programs
       neovim
