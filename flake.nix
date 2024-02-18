@@ -21,7 +21,7 @@
     nixosConfigurations.Yeats = nixpkgs.lib.nixosSystem {
       modules = [ 
       
-      ./configuration.nix
+      ./hosts/Yeats/configuration.nix
       ./configs/steam.nix
       
       home-manager.nixosModules.home-manager {
