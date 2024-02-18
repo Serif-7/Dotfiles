@@ -80,7 +80,6 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  programs.fish.enable = true;
   users.users.daniel = {
     isNormalUser = true;
     description = "Daniel Gilleran";
@@ -90,7 +89,6 @@
       fish
     #  thunderbird
     ];
-    shell = pkgs.fish;
   };
 
   # Allow unfree packages

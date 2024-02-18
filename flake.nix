@@ -20,7 +20,8 @@
   in {
     nixosConfigurations.Yeats = nixpkgs.lib.nixosSystem {
       modules = [ 
-      
+
+      ./system_config.nix
       ./hosts/Yeats/configuration.nix
       ./configs/steam.nix
       
@@ -36,6 +37,7 @@
      nixosConfigurations.Chaucer = nixpkgs.lib.nixosSystem {
       modules = [ 
       
+      ./system_config.nix
       ./hosts/Chaucer/configuration.nix
       ./configs/steam.nix
       

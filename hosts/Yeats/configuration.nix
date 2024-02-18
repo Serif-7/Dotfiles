@@ -10,10 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  # Enable experimental features (flakes)
-  nix.extraOptions = ''
-    extra-experimental-features = nix-command flakes
-    '';
 
   virtualisation.docker.enable = true;
 
@@ -91,14 +87,12 @@
     isNormalUser = true;
     description = "Daniel";
     extraGroups = [ "networkmanager" "wheel" "docker"];
-    shell = pkgs.fish;
     packages = with pkgs; [
       firefox
     #  thunderbird
     ];
   };
 
-  programs.fish.enable = true;
   programs.gamemode.enable = true;
 
   
