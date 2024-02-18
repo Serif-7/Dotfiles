@@ -70,7 +70,6 @@
       uxn
       openmw
       portmod
-      retroarchFull
       image-roll
       jrnl
 

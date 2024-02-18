@@ -33,5 +33,20 @@
       specialArgs = { inherit inputs; };
 
      };
+     nixosConfigurations.Chaucer = nixpkgs.lib.nixosSystem {
+      modules = [ 
+      
+      ./hosts/Chaucer/configuration.nix
+      ./configs/steam.nix
+      
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true; # Global nixpkgs instance
+        home-manager.useUserPackages = true; # local user packages
+        home-manager.users.daniel = import ./home.nix;
+        }
+      ];
+      specialArgs = { inherit inputs; };
+
+     };
   };
 }
