@@ -99,6 +99,8 @@
   };
 
   programs.fish.enable = true;
+  programs.gamemode.enable = true;
+
   
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -112,6 +114,13 @@
     helix
     fish
     git
+
+    (retroarch.override {
+    cores = with libretro; [
+      tic80
+      snes9x
+    ];
+  })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

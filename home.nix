@@ -70,7 +70,9 @@
       uxn
       openmw
       portmod
-      libretro.tic80
+      retroarchFull
+      image-roll
+      jrnl
 
       # Art Tools
       krita
@@ -84,17 +86,17 @@
       rustc
       cargo
       libgcc
+      gcc
       trenchbroom
       docker
       python3
       lua
-      lua-language-servers
-      make
-      cmake
+      lua-language-server
       ruby
 
-      # Libraries
-      libglvnd
+      # Build Tools
+      cmake
+      gnumake
 
       # Network Tools
       httpie
