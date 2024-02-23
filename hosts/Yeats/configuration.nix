@@ -108,13 +108,8 @@
     helix
     fish
     git
+    tlp
 
-    (retroarch.override {
-    cores = with libretro; [
-      tic80
-      snes9x
-    ];
-  })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -126,6 +121,8 @@
   # };
 
   # List services that you want to enable:
+  services.power-profiles-daemon.enable = false;
+  services.tlp.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
