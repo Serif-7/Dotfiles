@@ -82,13 +82,14 @@
       # Dev Tools
       git
       nim2
+      # nim2Packages.nimble
       godot_4
       love
       rustc
       cargo
       libgcc
       gcc
-      trenchbroom
+      # trenchbroom
       docker
       python3
       lua
