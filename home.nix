@@ -27,6 +27,7 @@
       xdg-utils
       binutils
       gparted
+      efibootmgr
 
       # User Programs
       neovim

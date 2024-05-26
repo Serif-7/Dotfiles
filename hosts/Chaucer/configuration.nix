@@ -16,7 +16,7 @@
   boot.loader.grub = {
     enable = true;
     useOSProber = true;
-    device = "nodev";
+    device = "/dev/nvme1n1";
     efiSupport = true;
     };
 
