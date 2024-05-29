@@ -5,6 +5,7 @@
   # plain attrset
   inputs = {
     nixpkgs = {
+      #unstable is not cached
       url = "github:nixos/nixpkgs/nixos-unstable";
       };
     home-manager = {

@@ -21,4 +21,12 @@
   programs.fish.enable = true;
   users.users.daniel.shell = pkgs.fish;
 
+    # added 5/28/2024 because one of the installed
+  # packages' electron versio was declared EOL
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+    ];
+
+
+
 }
