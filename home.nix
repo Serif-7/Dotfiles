@@ -12,12 +12,6 @@
 
   programs.home-manager.enable = true;
 
-  # added 5/28/2024 because one of the installed
-  # packages' electron versio was declared EOL
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-    ];
-
   home = {
     /* The home.stateVersion option does not have a default and must be set */
     stateVersion = "18.09";
@@ -84,6 +78,7 @@
       zoxide
       kdePackages.okular # PDF reader
       
+
       # Dev Tools
       git
       nim2
