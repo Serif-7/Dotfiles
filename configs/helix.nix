@@ -5,6 +5,11 @@
 
   programs.helix = {
     enable = true;
+    defaultEditor = true;
+    ignores = [
+      "./build"
+      "!.gitignore"
+    ];
 
     settings = {
       theme = "kanagawa";
@@ -70,10 +75,6 @@
           comment-token = "--";
           # language-server = { command = "haskell-language-server-wrapper"; args = ["--lsp"]; };
           indent = { tab-width = 2; unit = "  "; };
-        }
-        {
-          name = "java";
-          # language-server.command = lib.getExe' pkgs.jdt-language-server "jdt-language-server";
         }
       ];
     };

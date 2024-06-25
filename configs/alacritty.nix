@@ -8,7 +8,6 @@ in {
     settings = {
 
       font = {
-
         size = 14;
         offset = {
           x = 1;
@@ -22,8 +21,8 @@ in {
           y = 25;
         };
         dynamic_padding = true;
-        #decorations = "None"
-        decorations = "Full";
+        decorations = "None";
+        #decorations = "Full";
       };
 
       cursor = {
@@ -66,6 +65,15 @@ in {
           white = "0xdcd7ba";
         };
       };
+
+      
+      # keyboard = {
+        
+      #     {key = "F11", action = "ToggleFullscreen"}
+      #     # {key = "c", mods = "Control", action = "Copy"},
+      #     # {key = "v", mods = "Control", action = "Paste"}
+        
+      # };
     };
   };
 }

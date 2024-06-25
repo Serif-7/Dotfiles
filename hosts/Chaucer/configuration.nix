@@ -11,14 +11,17 @@
     ];
 
   # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub = {
-    enable = true;
-    useOSProber = true;
-    device = "/dev/nvme1n1";
-    efiSupport = true;
-    };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  # honestly just don't fuck around with grub
+  # it's not worth it
+  # boot.loader.grub = {
+  #   enable = true;
+  #   useOSProber = true;
+  #   device = "/dev/nvme1n1";
+  #   efiSupport = true;
+  #   };
 
   boot.initrd.luks.devices."luks-bc21d625-0028-484c-a8dd-8798fa42b5db".device = "/dev/disk/by-uuid/bc21d625-0028-484c-a8dd-8798fa42b5db";
   networking.hostName = "Chaucer"; # Define your hostname.

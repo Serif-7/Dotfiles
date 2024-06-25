@@ -28,6 +28,7 @@
       binutils
       gparted
       efibootmgr
+      wl-clipboard
 
       # User Programs
       neovim
@@ -44,27 +45,26 @@
       alacritty
       anki
       mpv
-      du-dust
+      du-dust # disk usage viewer
       fzf
       ripgrep
       tealdeer
       bottom
-      gping
-      procs
+      gping # ping with a graph
+      procs # process viewer
       zoxide
-      zathura
+      zathura # pdf reader
       most
       bat
       zellij
-      nyxt
+      #nyxt # emacs-like browser
       pandoc
       tor-browser
-      libsForQt5.konversation
+      kdePackages.konversation # IRC client
       neofetch
       chromium
-      foliate
+      foliate # eBook reader
       youtube-dl
-      blender
       wl-clipboard
       home-manager # standalone tool for managing HM config
       focuswriter
@@ -72,12 +72,11 @@
       uxn
       openmw
       portmod
-      image-roll
+      image-roll # image viewer
       jrnl
-
-      # Art Tools
-      krita
-      aseprite
+      telegram-desktop
+      zoxide
+      kdePackages.okular # PDF reader
       
       # Dev Tools
       git
@@ -89,12 +88,15 @@
       cargo
       libgcc
       gcc
-      # trenchbroom
+      gdb
       docker
       python3
       lua
       lua-language-server
       ruby
+      zig
+      zls
+      lldb #debugger
 
       # Build Tools
       cmake
@@ -107,21 +109,22 @@
       socat
       wget
       curl
-      dogdns
+      dogdns # DNS client
 
       # Hacker Tools
       nmap
       ffuf
-      feroxbuster
+      feroxbuster # recursive content discovery tool
       burpsuite
       hashcat
-      john
+      john # password cracker
       metasploit
       sqlmap
       aircrack-ng
       wifite2
-      thc-hydra
+      thc-hydra # network logon cracker
       imhex
+      dsniff # Collection of programs including a TCP sniffer
     
     ];
 
