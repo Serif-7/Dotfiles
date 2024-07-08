@@ -36,6 +36,9 @@
       efibootmgr
       wl-clipboard
 
+      # Libraries
+      SDL2
+
       # User Programs
       neovim
       discord
