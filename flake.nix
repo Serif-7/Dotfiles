@@ -38,7 +38,7 @@
        nixosConfigurations.Chaucer = nixpkgs.lib.nixosSystem {
         modules = [ 
       
-        ./system_config.nix
+        ./global_config.nix
         ./hosts/Chaucer/configuration.nix
         ./configs/steam.nix
       

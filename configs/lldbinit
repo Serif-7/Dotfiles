@@ -2,3 +2,6 @@ command script import ~/Dotfiles/scripts/zig_lldb_pretty_printers.py
 type category enable zig
 type category enable zig.std
 type category enable zig.stage2
+
+command alias bl breakpoint list
+command alias clear breakpoint delete

@@ -3,7 +3,7 @@
 
 {
   imports = [
-    ./configs/helix.nix
+    # ./configs/helix.nix
     ./configs/fish.nix
     ./configs/tealdeer.nix
     ./configs/alacritty.nix
@@ -11,6 +11,10 @@
   ];
 
   programs.home-manager.enable = true;
+
+  # XDG config
+  xdg.configFile.".lldbinit".source = ./configs/lldbinit;
+  # xdg.configFile.".config/helix/config.toml".source = ./configs/helix.toml;
 
   home = {
     /* The home.stateVersion option does not have a default and must be set */
@@ -80,26 +84,27 @@
       telegram-desktop
       zoxide
       kdePackages.okular # PDF reader
+
+      # Languages
+      zig
+      gcc
+      ruby
+      lua
+      rustc
+      nim2
+      python3
       
 
       # Dev Tools
       git
-      nim2
-      # nim2Packages.nimble
       godot_4
       love
-      rustc
       cargo
       libgcc
-      gcc
       gdb
       docker
-      python3
-      lua
       lua-language-server
-      ruby
-      zig
-      zls
+      zls # Zig Language Server
       lldb #debugger
 
       # Windows Stuff
