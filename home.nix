@@ -12,9 +12,13 @@
 
   programs.home-manager.enable = true;
 
-  # XDG config
-  xdg.configFile.".lldbinit".source = ./configs/lldbinit;
-  # xdg.configFile.".config/helix/config.toml".source = ./configs/helix.toml;
+  # XDG and home file config
+  # xdg.enable = true;
+  # xdg.configHome = "${config.home.homeDirectory}/.config";
+  # xdg.configFile."../.lldbinit".source = ./configs/lldbinit;
+  # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
+  home.file.".lldbinit".source = ./configs/lldbinit;
+  home.file."./.config/helix/config.toml".source = ./configs/helix.toml;
 
   home = {
     /* The home.stateVersion option does not have a default and must be set */

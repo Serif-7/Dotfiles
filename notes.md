@@ -7,5 +7,3 @@
 * flake.nix: Description of overall config
 * flake.lock: list of dependencies and versions of current packages
 		updated by `nix flake update`
-* `build.sh` runs the rebuild command and imperatively copies configs not handled
-	by home manager to their proper location
