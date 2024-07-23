@@ -88,6 +88,10 @@
       telegram-desktop
       zoxide
       kdePackages.okular # PDF reader
+      element-desktop
+
+      # Office
+      libreoffice
 
       # Languages
       zig
@@ -97,7 +101,7 @@
       rustc
       nim2
       python3
-      
+      go
 
       # Dev Tools
       git
@@ -110,6 +114,7 @@
       lua-language-server
       zls # Zig Language Server
       lldb #debugger
+      delve # go debugger
 
       # Windows Stuff
       wineWowPackages.stable

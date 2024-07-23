@@ -7,3 +7,9 @@
 * flake.nix: Description of overall config
 * flake.lock: list of dependencies and versions of current packages
 		updated by `nix flake update`
+
+
+# New Host instructions
+
+* Always make user `daniel`
+* add host specific config to `flake.nix` and `hosts/`

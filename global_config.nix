@@ -17,6 +17,12 @@
     "electron-25.9.0"
     ];
 
+  # block timewasting sites
+  networking.hosts = {
+    "127.0.0.1" = ["www.twitter.com" "twitter.com" "www.x.com" "x.com" "www.youtube.com" "youtube.com" "www.reddit.com" "www.news.ycombinator" "news.ycombinator.com"];
+    
+  };
+
 
 
 }

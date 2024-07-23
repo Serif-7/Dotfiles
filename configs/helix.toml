@@ -36,4 +36,14 @@ render = true
 
 
 [keys.normal]
-C-s = ":w"
+#C-s = ":w"
+
+# append a ';' to the end of a line and enter insert mode on the next line
+";"= ["goto_line_end", ":append-output echo ';'", "open_below", "insert_mode"]
+# overrides 'collapse_selection'
+
+# version that keeps the cursor in place
+#A-; = ["save_selection", "goto_line_end", ":append-output echo -n ';'", "jump_backward"]
+
+[keys.insert]
+
