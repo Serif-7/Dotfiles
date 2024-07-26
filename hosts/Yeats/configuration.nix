@@ -126,6 +126,31 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  services.openssh = {
+    banner = "
+                                                                                            
+                                                                                            
+YYYYYYY       YYYYYYY                                        tttt                           
+Y:::::Y       Y:::::Y                                     ttt:::t                           
+Y:::::Y       Y:::::Y                                     t:::::t                           
+Y::::::Y     Y::::::Y                                     t:::::t                           
+YYY:::::Y   Y:::::YYYeeeeeeeeeeee    aaaaaaaaaaaaa  ttttttt:::::ttttttt        ssssssssss   
+   Y:::::Y Y:::::Y ee::::::::::::ee  a::::::::::::a t:::::::::::::::::t      ss::::::::::s  
+    Y:::::Y:::::Y e::::::eeeee:::::eeaaaaaaaaa:::::at:::::::::::::::::t    ss:::::::::::::s 
+     Y:::::::::Y e::::::e     e:::::e         a::::atttttt:::::::tttttt    s::::::ssss:::::s
+      Y:::::::Y  e:::::::eeeee::::::e  aaaaaaa:::::a      t:::::t           s:::::s  ssssss 
+       Y:::::Y   e:::::::::::::::::e aa::::::::::::a      t:::::t             s::::::s      
+       Y:::::Y   e::::::eeeeeeeeeee a::::aaaa::::::a      t:::::t                s::::::s   
+       Y:::::Y   e:::::::e         a::::a    a:::::a      t:::::t    ttttttssssss   s:::::s 
+       Y:::::Y   e::::::::e        a::::a    a:::::a      t::::::tttt:::::ts:::::ssss::::::s
+    YYYY:::::YYYY e::::::::eeeeeeeea:::::aaaa::::::a      tt::::::::::::::ts::::::::::::::s 
+    Y:::::::::::Y  ee:::::::::::::e a::::::::::aa:::a       tt:::::::::::tt s:::::::::::ss  
+    YYYYYYYYYYYYY    eeeeeeeeeeeeee  aaaaaaaaaa  aaaa         ttttttttttt    sssssssssss    
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            ";
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
