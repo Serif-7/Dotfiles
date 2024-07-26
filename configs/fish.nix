@@ -12,6 +12,7 @@
     shellAliases = {
       ls = "eza";
       "..." = "cd ../..";
+      "...." = "cd ../../..";
       grep = "rg";
       ping = "gping";
       ps = "procs";

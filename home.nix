@@ -89,6 +89,7 @@
       zoxide
       kdePackages.okular # PDF reader
       element-desktop
+      age # encryption tool
 
       # Office
       libreoffice
@@ -115,6 +116,7 @@
       zls # Zig Language Server
       lldb #debugger
       delve # go debugger
+      gitless # alternative git interface
 
       # Windows Stuff
       wineWowPackages.stable
@@ -145,7 +147,7 @@
       aircrack-ng
       wifite2
       thc-hydra # network logon cracker
-      imhex
+      imhex # hex editor
       dsniff # Collection of programs including a TCP sniffer
     
     ];
