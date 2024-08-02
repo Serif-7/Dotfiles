@@ -17,6 +17,20 @@
     #  thunderbird
     ];
   };
+  
+
+  ### Window Manager / Desktop Environment
+  
+  security.polkit.enable = true; # controls privileges for processes
+  # necessary to enable to make sway work in home-manager
+  # programs.sway.enable = true;
+  # programs.hyprland.enable = true;
+
+  # Enable the GNOME Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -52,7 +66,7 @@
     "127.0.0.1" = [
     "www.twitter.com" "twitter.com" "www.x.com" "x.com" 
     #"www.youtube.com" "youtube.com" 
-    "www.reddit.com" 
+    #"www.reddit.com" 
     "www.news.ycombinator" "news.ycombinator.com"
     "www.4channel.org" "www.4chan.org"
     ];

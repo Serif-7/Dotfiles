@@ -1,0 +1,30 @@
+# Nimbus
+# Author: Serif
+
+"ui.selection" = { bg = "sky"}
+"ui.selection.primary" = { bg = "sky" }
+"ui.background" = {fg = "eggplant", bg = "sage"}
+
+type = "sky"
+string = "beehive"
+function = "sky"
+variable = "chocolate"
+keyword = "sky"
+"keyword.control.return" = "olive"
+
+comment = "slate"
+
+
+[palette]
+eggplant = "#4b303a"
+beehive = "#906f4b"
+sky = "#6aa69f"
+mustard = "#bd9e5e"
+olive = "#8f9275"
+sage = "#738979"
+slate = "#64655f"
+chocolate = "#705245"
+plum = "#5c5051"
+dark_grove = "#757462"
+
+# Need a red

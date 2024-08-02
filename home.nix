@@ -18,7 +18,7 @@
   # xdg.configFile."../.lldbinit".source = ./configs/lldbinit;
   # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
   home.file.".lldbinit".source = ./configs/lldbinit;
-  home.file."./.config/helix/config.toml".source = ./configs/helix.toml;
+  home.file."./.config/helix/config.toml".source = ./configs/helix/helix.toml;
 
   home = {
     /* The home.stateVersion option does not have a default and must be set */
@@ -91,6 +91,14 @@
       element-desktop
       age # encryption tool
 
+      # Window Manager
+      # sway
+      # grim
+      # slurp
+      # mako
+      rofi
+      hyprland
+
       # Office
       libreoffice
 
@@ -103,6 +111,8 @@
       nim2
       python3
       go
+      sbcl # Common Lisp
+      racket # includes DrRacket
 
       # Dev Tools
       git
@@ -158,5 +168,21 @@
       PAGER = "most";
     };
 
+
   };
+
+  # Window Manager config
+
+  # wayland.windowManager.sway = {
+  #   enable = true;
+  #   config = {
+  #     terminal = "alacritty";
+  #   };
+  # };
+  # wayland.windowManager.hyprland = {
+  #   enable = true;
+  #   config = {
+  #     terminal = "alacritty";
+  #   };
+  # };
 }
