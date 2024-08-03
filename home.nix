@@ -1,5 +1,5 @@
 
-{ config, pkgs, zig-overlay, ... }:
+{ config, pkgs, zigpkgs, ... }:
 
 {
   imports = [
@@ -104,7 +104,7 @@
 
       # Languages
       # zig
-      pkgs.zigpkgs.master
+      zigpkgs.master
       gcc
       ruby
       lua

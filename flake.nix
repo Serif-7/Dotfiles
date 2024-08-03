@@ -28,6 +28,9 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
+        config = {
+          allowUnfree = true;
+        };
         overlays = [
           zig-overlay.overlays.default
         ];
@@ -62,7 +65,12 @@
           home-manager.useGlobalPkgs = true; # Global nixpkgs instance
           home-manager.useUserPackages = true; # local user packages
           home-manager.users.daniel = import ./home.nix;
-          home-manager.extraSpecialArgs = { inherit zig-overlay; };
+
+          #pass zig overlay to HM
+          home-manager.extraSpecialArgs = { 
+            inherit pkgs;
+            zigpkgs = pkgs.zigpkgs;
+            };
           }
         ];
         specialArgs = { inherit inputs; };
