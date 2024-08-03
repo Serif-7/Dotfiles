@@ -2,6 +2,8 @@
 {
   description = "Daniel Gilleran's NixOS config";
 
+  # https://wiki.nixos.org/wiki/Flakes
+
   # plain attrset
   inputs = {
     nixpkgs = {
@@ -12,14 +14,27 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
       };
+    # Zig overlay
+    zig-overlay = {
+      url = "github:mitchellh/zig-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # function that returns an attrset
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, zig-overlay, ... }:
+
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          zig-overlay.overlays.default
+        ];
+      };
     in {
       nixosConfigurations.Yeats = nixpkgs.lib.nixosSystem {
+        inherit system;
         modules = [ 
 
         ./global_config.nix
@@ -35,7 +50,8 @@
         specialArgs = { inherit inputs; };
 
        };
-       nixosConfigurations.Chaucer = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.Chaucer = nixpkgs.lib.nixosSystem {
+        inherit system;
         modules = [ 
       
         ./global_config.nix
@@ -46,10 +62,12 @@
           home-manager.useGlobalPkgs = true; # Global nixpkgs instance
           home-manager.useUserPackages = true; # local user packages
           home-manager.users.daniel = import ./home.nix;
+          home-manager.extraSpecialArgs = { inherit zig-overlay; };
           }
         ];
         specialArgs = { inherit inputs; };
 
        };
+      # overlays.default = [(prev: next: {zig = zig.packages.master;}];
     };
 }

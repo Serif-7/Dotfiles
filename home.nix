@@ -1,5 +1,5 @@
 
-{ config, pkgs, ... }:
+{ config, pkgs, zig-overlay, ... }:
 
 {
   imports = [
@@ -103,7 +103,8 @@
       libreoffice
 
       # Languages
-      zig
+      # zig
+      pkgs.zigpkgs.master
       gcc
       ruby
       lua

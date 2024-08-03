@@ -2,9 +2,12 @@
 
   # System level configuration for all hosts
 
-  nix.extraOptions = ''
-    extra-experimental-features = nix-command flakes
-    '';
+  # nix.extraOptions = ''
+  #   extra-experimental-features = nix-command flakes
+  #   '';
+
+  # enable flakes
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.daniel = {
