@@ -75,7 +75,7 @@
       neofetch
       chromium
       foliate # eBook reader
-      youtube-dl
+      yt-dlp
       wl-clipboard
       home-manager # standalone tool for managing HM config
       focuswriter
