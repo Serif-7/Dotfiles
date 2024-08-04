@@ -48,6 +48,11 @@
           home-manager.useGlobalPkgs = true; # Global nixpkgs instance
           home-manager.useUserPackages = true; # local user packages
           home-manager.users.daniel = import ./home.nix;
+          #pass zig overlay to HM
+          home-manager.extraSpecialArgs = { 
+            inherit pkgs;
+            zigpkgs = pkgs.zigpkgs;
+            };
           }
         ];
         specialArgs = { inherit inputs; };
