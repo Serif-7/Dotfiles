@@ -3,7 +3,9 @@
 * global_config: global system configuration for all hosts
 * configs/: program-specific configuration files
 * scripts/: miscellaneous code, currently contains debugger scripts
-* home.nix: home-manager config and package list
+* shells/: devshells / environments
+* home.nix: home-manager profile and package list
+* hm.nix: global home-manager config
 * flake.nix: Description of overall config
 * flake.lock: list of dependencies and versions of current packages
 		updated by `nix flake update`

@@ -1,5 +1,7 @@
 
-{ config, pkgs, zigpkgs, ... }:
+{ config, pkgs, ... }:
+
+# home manager profile for serif
 
 {
   imports = [
@@ -103,8 +105,7 @@
       libreoffice
 
       # Languages
-      # zig
-      zigpkgs.master
+      zig
       gcc
       ruby
       lua
@@ -128,6 +129,7 @@
       lldb #debugger
       delve # go debugger
       gitless # alternative git interface
+      direnv
 
       # Windows Stuff
       wineWowPackages.stable

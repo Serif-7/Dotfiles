@@ -12,7 +12,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.daniel = {
     isNormalUser = true;
-    description = "Daniel Gilleran";
+    description = "Serif";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
@@ -33,7 +33,6 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -58,11 +57,11 @@
   users.defaultUserShell = pkgs.fish;
   users.users.daniel.shell = pkgs.fish;
 
-    # added 5/28/2024 because one of the installed
+  # added 5/28/2024 because one of the installed
   # packages' electron versio was declared EOL
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-    ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "electron-25.9.0"
+  #   ];
 
   networking.hosts = {
 

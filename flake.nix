@@ -1,6 +1,6 @@
 
 {
-  description = "Daniel Gilleran's NixOS config";
+  description = "Serif's NixOS config";
 
   # https://wiki.nixos.org/wiki/Flakes
 
@@ -14,73 +14,35 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
       };
-    # Zig overlay
-    zig-overlay = {
-      url = "github:mitchellh/zig-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   # function that returns an attrset
-  outputs = inputs@{ self, nixpkgs, home-manager, zig-overlay, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
 
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
-        overlays = [
-          zig-overlay.overlays.default
-        ];
-      };
-    in {
+    {
       nixosConfigurations.Yeats = nixpkgs.lib.nixosSystem {
-        inherit system;
         modules = [ 
 
         ./global_config.nix
         ./hosts/Yeats/configuration.nix
         ./configs/steam.nix
+        ./hm.nix
       
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true; # Global nixpkgs instance
-          home-manager.useUserPackages = true; # local user packages
-          home-manager.users.daniel = import ./home.nix;
-          #pass zig overlay to HM
-          home-manager.extraSpecialArgs = { 
-            inherit pkgs;
-            zigpkgs = pkgs.zigpkgs;
-            };
-          }
         ];
         specialArgs = { inherit inputs; };
 
        };
       nixosConfigurations.Chaucer = nixpkgs.lib.nixosSystem {
-        inherit system;
         modules = [ 
       
         ./global_config.nix
         ./hosts/Chaucer/configuration.nix
         ./configs/steam.nix
-      
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true; # Global nixpkgs instance
-          home-manager.useUserPackages = true; # local user packages
-          home-manager.users.daniel = import ./home.nix;
+        ./hm.nix
 
-          #pass zig overlay to HM
-          home-manager.extraSpecialArgs = { 
-            inherit pkgs;
-            zigpkgs = pkgs.zigpkgs;
-            };
-          }
         ];
         specialArgs = { inherit inputs; };
 
        };
-      # overlays.default = [(prev: next: {zig = zig.packages.master;}];
     };
 }
