@@ -6,6 +6,7 @@
 {
   imports = [
     # ./configs/helix.nix
+    ./configs/sway.nix
     ./configs/fish.nix
     ./configs/tealdeer.nix
     ./configs/alacritty.nix
@@ -14,6 +15,7 @@
 
   programs.home-manager.enable = true;
 
+  
   # XDG and home file config
   # xdg.enable = true;
   # xdg.configHome = "${config.home.homeDirectory}/.config";
@@ -93,13 +95,23 @@
       element-desktop
       age # encryption tool
 
+      # Color Pickers
+      gpick
+      xcolor
+      wl-color-picker
+      epick
+      
+
       # Window Manager
-      # sway
-      # grim
-      # slurp
-      # mako
+      sway
+      grim
+      slurp
+      mako
       rofi
-      hyprland
+      swayidle
+      swaybg
+      swaylock
+      # hyprland
 
       # Office
       libreoffice
@@ -126,6 +138,7 @@
       docker
       lua-language-server
       zls # Zig Language Server
+      nil # Nix Language Server
       lldb #debugger
       delve # go debugger
       gitless # alternative git interface
@@ -171,21 +184,6 @@
       PAGER = "most";
     };
 
-
   };
 
-  # Window Manager config
-
-  # wayland.windowManager.sway = {
-  #   enable = true;
-  #   config = {
-  #     terminal = "alacritty";
-  #   };
-  # };
-  # wayland.windowManager.hyprland = {
-  #   enable = true;
-  #   config = {
-  #     terminal = "alacritty";
-  #   };
-  # };
 }

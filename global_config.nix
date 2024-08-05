@@ -30,8 +30,20 @@
   # programs.hyprland.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
+
+  # Greeter for launching Sway
+  services.greetd = {                                                      
+    enable = true;                                                         
+    settings = {                                                           
+      default_session = {                                                  
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+        user = "greeter";                                                  
+      };                                                                   
+    };                                                                     
+  };
+  
   
 
   # Allow unfree packages
