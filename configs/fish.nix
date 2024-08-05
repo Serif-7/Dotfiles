@@ -19,6 +19,10 @@
       find = "fd";
       cat = "bat -p";
       stats = "bottom";
+      git = "gl";
+
+      # default scan
+      scan = "nmap -sC -sV -oA";
     };
   };
 }

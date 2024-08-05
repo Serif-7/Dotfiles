@@ -107,10 +107,11 @@
       grim
       slurp
       mako
-      rofi
+      wofi
       swayidle
       swaybg
       swaylock
+      waybar
       # hyprland
 
       # Office
