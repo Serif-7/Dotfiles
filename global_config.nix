@@ -29,9 +29,25 @@
   # programs.sway.enable = true;
   # programs.hyprland.enable = true;
 
+  # necessary for swaylock to work
+  security.pam.services.swaylock = {};
+
   # Enable the GNOME Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
+
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   wayland = {
+  #     enable = true;
+  #   };
+  #   settings = {
+  #     Autologin = {
+  #       User = "daniel";
+  #     };
+      
+  #   };
+  # };
 
   # Greeter for launching Sway
   services.greetd = {                                                      

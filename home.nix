@@ -23,6 +23,7 @@
   # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
   home.file.".lldbinit".source = ./configs/lldbinit;
   home.file."./.config/helix/config.toml".source = ./configs/helix/helix.toml;
+  # home.file."./.config/swat/config".source = ./configs/sway/config;
 
   home = {
     /* The home.stateVersion option does not have a default and must be set */
@@ -72,7 +73,8 @@
       most
       bat
       zellij
-      #nyxt # emacs-like browser
+      # nyxt # emacs-like browser
+        # still fails to build as of 8/06/2024
       pandoc
       tor-browser
       kdePackages.konversation # IRC client
@@ -94,6 +96,7 @@
       kdePackages.okular # PDF reader
       element-desktop
       age # encryption tool
+      xfce.thunar # File Manager
 
       # Color Pickers
       gpick
@@ -106,12 +109,14 @@
       sway
       grim
       slurp
-      mako
+      # mako
+      swaynotificationcenter # notification daemon
       wofi
       swayidle
       swaybg
       swaylock
       waybar
+      bemenu
       # hyprland
 
       # Office
