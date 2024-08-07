@@ -8,6 +8,10 @@ in {
     settings = {
 
       font = {
+        normal = {
+          # family = "Refraktury";
+          style = "Regular";
+        };
         size = 14;
         offset = {
           x = 1;

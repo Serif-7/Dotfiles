@@ -11,6 +11,7 @@
     ./configs/tealdeer.nix
     ./configs/alacritty.nix
     ./configs/zathura.nix
+    # ./configs/flameshot.nix
   ];
 
   programs.home-manager.enable = true;
@@ -82,17 +83,13 @@
       chromium
       foliate # eBook reader
       yt-dlp
-      wl-clipboard
       home-manager # standalone tool for managing HM config
-      focuswriter
-      libreoffice
       uxn
       openmw
       portmod
       image-roll # image viewer
       jrnl
       telegram-desktop
-      zoxide
       kdePackages.okular # PDF reader
       element-desktop
       age # encryption tool
@@ -109,6 +106,7 @@
       sway
       grim
       slurp
+      flameshot
       # mako
       swaynotificationcenter # notification daemon
       wofi
@@ -121,6 +119,7 @@
 
       # Office
       libreoffice
+      focuswriter
 
       # Languages
       zig
@@ -136,6 +135,7 @@
 
       # Dev Tools
       git
+      gitless # alternative git interface
       godot_4
       love
       cargo
@@ -147,7 +147,6 @@
       nil # Nix Language Server
       lldb #debugger
       delve # go debugger
-      gitless # alternative git interface
       direnv
 
       # Windows Stuff

@@ -26,8 +26,6 @@
   
   security.polkit.enable = true; # controls privileges for processes
   # necessary to enable to make sway work in home-manager
-  # programs.sway.enable = true;
-  # programs.hyprland.enable = true;
 
   # necessary for swaylock to work
   security.pam.services.swaylock = {};
@@ -56,6 +54,11 @@
       default_session = {                                                  
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
         user = "greeter";                                                  
+      };
+      #auto login
+      initial_session = {
+        command = "${pkgs.sway}";
+        user = "daniel";
       };                                                                   
     };                                                                     
   };
@@ -121,5 +124,28 @@
     };
   };
 
+  # enable mullvad VPN
+  services.mullvad-vpn.enable = true;
+
+  # Fonts
+  fonts = {
+    enableDefaultPackages = true;
+
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+      ubuntu_font_family
+      liberation_ttf
+      # Persian Font
+      vazir-fonts
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        serif = [  "Liberation Serif" ];
+        sansSerif = [ "FiraCode" ];
+        monospace = [ "FiraCode" ];
+      };
+    };
+  };
 
 }
