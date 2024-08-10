@@ -26,6 +26,9 @@
   home.file."./.config/helix/config.toml".source = ./configs/helix/helix.toml;
   # home.file."./.config/swat/config".source = ./configs/sway/config;
 
+  # Fonts
+  home.file."./.local/share/fonts/Fraktion.otf".source = ./fonts/fraktion.otf;
+
   home = {
     /* The home.stateVersion option does not have a default and must be set */
     stateVersion = "18.09";
@@ -43,6 +46,11 @@
       gparted
       efibootmgr
       wl-clipboard
+      brightnessctl
+      # gnome.gnome-keyring
+      # busybox
+      # psmisc
+      cacert
 
       # Libraries
       SDL2
@@ -115,6 +123,8 @@
       swaylock
       waybar
       bemenu
+      wev # Wayland Event Viewer
+      wshowkeys # show keys pressed (for supported wl compositors)
       # hyprland
 
       # Office

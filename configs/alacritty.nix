@@ -1,7 +1,8 @@
 { config, ... }:
 
 let
-  colors = import ./kanagawa.nix;
+  themeModule = import ./kanagawa.nix;
+  colors = themeModule.kanagawa;
 in {
   programs.alacritty = {
     enable = true;
@@ -10,6 +11,7 @@ in {
       font = {
         normal = {
           # family = "Refraktury";
+          family = "Fraktion";
           style = "Regular";
         };
         size = 14;
@@ -38,8 +40,8 @@ in {
 
       colors = {
         primary = {
-          background = colors.kanagawa.bg;
-          foreground = colors.kanagawa.fg;
+          background = colors.bg;
+          foreground = colors.fg;
         };
         
         # cursor = {
@@ -48,26 +50,34 @@ in {
         # };
         
         normal = {
-          black = "0xdcd7ba";
-          red = "0xc34043";
-          green = "0x76946a";
-          yellow = "0xc0a36e";
-          blue = "0x7e9cd8";
-          magenta = "0x957fb8";
-          cyan = "0x6a9589";
-          white = "0x6a9589";
+          black = colors.black;
+          red = colors.red;
+          green = colors.green;
+          yellow = colors.yellow;
+          blue = colors.blue;
+          magenta = colors.magenta;
+          cyan = colors.cyan;
+          white = colors.white;
+          # black = "0xdcd7ba";
+          # red = "0xc34043";
+          # green = "0x76946a";
+          # yellow = "0xc0a36e";
+          # blue = "0x7e9cd8";
+          # magenta = "0x957fb8";
+          # cyan = "0x6a9589";
+          # white = "0x6a9589";
         };
 
-        bright = {
-          black = "0x727169";
-          red = "0xe82424";
-          green = "0x98bb6c";
-          yellow = "0xe6c384";
-          blue = "0x7fb4ca";
-          magenta = "0x938aa9";
-          cyan = "0x7aa89f";
-          white = "0xdcd7ba";
-        };
+        # bright = {
+        #   black = "0x727169";
+        #   red = "0xe82424";
+        #   green = "0x98bb6c";
+        #   yellow = "0xe6c384";
+        #   blue = "0x7fb4ca";
+        #   magenta = "0x938aa9";
+        #   cyan = "0x7aa89f";
+        #   white = "0xdcd7ba";
+        # };
       };
 
       

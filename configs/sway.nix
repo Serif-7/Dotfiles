@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 # This module handles a full sway setup, including:
-# suspend/idle management
-# notifications
-# bar
-# clipboard
-# fonts
+# suspend/idle management [ ] # bug with sleep on wakeup
+# notifications [x]
+# bar [ ]
+# clipboard manager [ ]
+# fonts [ ]
 # and core sway config
 
 
@@ -30,12 +30,12 @@ in
       defaultWorkspace = "workspace number 1";
       startup = [
         {command = "swaybg -i ${wallpaper}";}
-        {command = "firefox";}
-        {command = "workspace number 2";}
-        {command = "discord";}
-        {command = "workspace number 3";}
-        {command = "${terminal}";}
-        {command = "workspace number 1";}
+        # {command = "firefox";}
+        # {command = "workspace number 2";}
+        # {command = "discord";}
+        # {command = "workspace number 3";}
+        # {command = "${terminal}";}
+        # {command = "workspace number 1";}
       ];
 
       # set to empty to disable swaybar
@@ -58,19 +58,31 @@ in
         let 
           modifier = config.wayland.windowManager.sway.config.modifier;
         in lib.mkOptionDefault {
-          "${modifier}+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
+          "${modifier}+Return" = "exec ${terminal}";
           "${modifier}+Shift+q" = "kill";
           # "${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
           "${modifier}+d" = "exec ${launcher}";
 
           # Screenshot
           # "Print" = "exec ${pkgs.flameshot}/bin/flameshot gui";
-          "Print" = "exec ${pkgs.grim}/bin/grim -g \"${pkgs.slurp}/bin/slurp -d\" - | ${pkgs.wl-clipboard}/bin/wl-copy";
+          # "Print" = "exec ${pkgs.grim}/bin/grim -g \"${pkgs.slurp}/bin/slurp -d\" - | ${pkgs.wl-clipboard}/bin/wl-copy";
           # "${modifier}+p" = "exec ${pkgs.grim}/bin/grim -g '${pkgs.slurp}/bin/slurp -d' - > ~/Pictures/Screenshots";
           # "${modifier}+p" = "exec ${pkgs.grim}/bin/grim -q 100 ~/Pictures/Screenshots/$(date)";
           # "${modifier}+p" = "exec ${pkgs.grim}/bin/grim -q 100 ~/Pictures/Screenshots/$(${pkgs.coreutils}/bin/date)";
           # "${modifier}+p" = "exec echo 'SCREENSHOT'";
-          "Shift+Print" = "exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%s).png && grim $IMG && wl-copy -t image/png < $IMG";
+
+          # Saves image and copies to clipboard
+          "Print" = "exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%s).png && grim $IMG && wl-copy -t image/png < $IMG";
+
+          # lower/raise brightness
+          "XF86MonBrightnessDown" = "exec brightnessctl set 10%-";
+          "XF86MonBrightnessUp" = "exec brightnessctl set +10%";
+
+          # audio controls
+          "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_SINK@ toggle";
+          "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%-";
+          "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_SINK@ 5%+";
+          
           };
 
       window.commands = [

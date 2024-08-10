@@ -28,6 +28,9 @@
   networking = {
     hostName = "Yeats";
     networkmanager.enable = true;
+    wireless = {
+      userControlled.enable = true;
+    };
   };
 
   # Set your time zone.
