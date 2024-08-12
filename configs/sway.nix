@@ -12,7 +12,7 @@
 
 
 let
-  swayfont = "Iosevka Bold 9";
+  swayfont = "Iosevka Nerd Font";
   terminal = "${pkgs.alacritty}/bin/alacritty";
   wallpaper = "~/Dotfiles/wallpapers/cloud1.jpg";
   bemenu = "BEMENU_BACKEND=wayland ${pkgs.bemenu}/bin/bemenu-run -H 16 -p execute: -b --fn 'Terminus 9' --tf '#FFFFFF' --scf '#FFFFFF' --ff '#FFFFFF' --tb ''#FFFFFF --nf '#FFFFFF' --hf '#FFFFFF' --nb '#000000' --tb '#000000' --fb '#000000'";
@@ -30,13 +30,21 @@ in
       defaultWorkspace = "workspace number 1";
       startup = [
         {command = "swaybg -i ${wallpaper}";}
-        # {command = "firefox";}
+        
         # {command = "workspace number 2";}
         # {command = "discord";}
         # {command = "workspace number 3";}
         # {command = "${terminal}";}
         # {command = "workspace number 1";}
       ];
+      assigns = {
+        "1: web" = [{ class = "^(?i)firefox$"; }];
+        "2: discord" = [{ class = "^discord$";}];
+        # "3: terminal" = [{ class = "^alacritty$";}];
+        "4: matrix" = [{ class = "^element$";}];
+      };
+
+      
 
       # set to empty to disable swaybar
       bars = [];
@@ -75,8 +83,8 @@ in
           "Print" = "exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%s).png && grim $IMG && wl-copy -t image/png < $IMG";
 
           # lower/raise brightness
-          "XF86MonBrightnessDown" = "exec brightnessctl set 10%-";
-          "XF86MonBrightnessUp" = "exec brightnessctl set +10%";
+          "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
+          "XF86MonBrightnessUp" = "exec brightnessctl set +5%";
 
           # audio controls
           "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_SINK@ toggle";
@@ -109,7 +117,7 @@ in
       * {
         border: none;
         border-radius: 0;
-        font-family: FiraCode;
+        font-family: ${swayfont};
       }
       window#waybar {
         background: #16191C;
@@ -133,7 +141,7 @@ in
       enable = true;
 
       events = [
-        { event = "before-sleep"; command = "${swaylockcmd}";}
+        # { event = "before-sleep"; command = "${swaylockcmd}";}
         { event = "lock"; command = "${swaylockcmd}";}
       ];
 
@@ -152,6 +160,14 @@ in
     # };
     swaync = {
       enable = true;
+      style = 
+        ''
+        * {
+          border: none;
+          border-radius: 0;
+          font-family: ${swayfont};
+        }
+        '';
     };
   };
 }

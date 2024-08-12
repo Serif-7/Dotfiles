@@ -1,8 +1,7 @@
 { config, ... }:
 
 let
-  themeModule = import ./kanagawa.nix;
-  colors = themeModule.kanagawa;
+  theme = import ./kanagawa.nix;
 in {
   programs.alacritty = {
     enable = true;
@@ -11,7 +10,7 @@ in {
       font = {
         normal = {
           # family = "Refraktury";
-          family = "Fraktion";
+          family = "Iosevka Nerd Font";
           style = "Regular";
         };
         size = 14;
@@ -40,8 +39,8 @@ in {
 
       colors = {
         primary = {
-          background = colors.bg;
-          foreground = colors.fg;
+          background = theme.bg;
+          foreground = theme.fg;
         };
         
         # cursor = {
@@ -50,14 +49,14 @@ in {
         # };
         
         normal = {
-          black = colors.black;
-          red = colors.red;
-          green = colors.green;
-          yellow = colors.yellow;
-          blue = colors.blue;
-          magenta = colors.magenta;
-          cyan = colors.cyan;
-          white = colors.white;
+          black = theme.black;
+          red = theme.red;
+          green = theme.green;
+          yellow = theme.yellow;
+          blue = theme.blue;
+          magenta = theme.magenta;
+          cyan = theme.cyan;
+          white = theme.white;
           # black = "0xdcd7ba";
           # red = "0xc34043";
           # green = "0x76946a";

@@ -158,6 +158,7 @@
       lldb #debugger
       delve # go debugger
       direnv
+      jq
 
       # Windows Stuff
       wineWowPackages.stable

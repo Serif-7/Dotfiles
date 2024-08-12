@@ -2,7 +2,7 @@
 
 
 let
-  colors = import ./kanagawa.nix;
+  theme= import ./kanagawa.nix;
 in {
   programs.zathura = {
     enable = true;
@@ -14,26 +14,26 @@ in {
     };
     
     options = {
-      default-bg = colors.kanagawa.bg;
-      default-fg = colors.kanagawa.fg;
-      statusbar-fg = colors.kanagawa.fg;
-      statusbar-bg = colors.kanagawa.bg;
-      inputbar-bg = colors.kanagawa.bg;
-      inputbar-fg = colors.kanagawa.fg;
-      notification-bg = colors.kanagawa.red;
-      notification-fg = colors.kanagawa.red;
-      notification-error-bg = colors.kanagawa.red;
-      notification-error-fg = colors.kanagawa.red;
-      notification-warning-bg = colors.kanagawa.red;
-      notification-warning-fg = colors.kanagawa.red;
-      highlight-color = colors.kanagawa.blue;
-      highlight-active-color = colors.kanagawa.white;
-      completion-bg = colors.kanagawa.bg;  
-      completion-fg = colors.kanagawa.fg;
-      completion-highlight-fg = colors.kanagawa.white;
-      completion-highlight-bg =  colors.kanagawa.bg;
-      recolor-lightcolor = colors.kanagawa.bg;
-      recolor-darkcolor = colors.kanagawa.white;
+      default-bg = theme.bg;
+      default-fg = theme.fg;
+      statusbar-fg = theme.fg;
+      statusbar-bg = theme.bg;
+      inputbar-bg = theme.bg;
+      inputbar-fg = theme.fg;
+      notification-bg = theme.red;
+      notification-fg = theme.red;
+      notification-error-bg = theme.red;
+      notification-error-fg = theme.red;
+      notification-warning-bg = theme.red;
+      notification-warning-fg = theme.red;
+      highlight-color = theme.blue;
+      highlight-active-color = theme.white;
+      completion-bg = theme.bg;  
+      completion-fg = theme.fg;
+      completion-highlight-fg = theme.white;
+      completion-highlight-bg =  theme.bg;
+      recolor-lightcolor = theme.bg;
+      recolor-darkcolor = theme.white;
 
       
       recolor = true;

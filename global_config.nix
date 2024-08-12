@@ -228,18 +228,16 @@ c45gQV6pCkMR4px3k+YnF0MoDpXQ0+0lWz7fnplqgHn+qHmoKrE5Y/bcWucG6QQCMB/DIYjUTGAl
     enableDefaultPackages = true;
 
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+      (nerdfonts.override { fonts = [ "FiraCode" "Iosevka"]; })
       ubuntu_font_family
       liberation_ttf
-      # Persian Font
-      vazir-fonts
     ];
 
     fontconfig = {
       defaultFonts = {
         serif = [  "Liberation Serif" ];
-        sansSerif = [ "FiraCode" ];
-        monospace = [ "FiraCode" ];
+        sansSerif = [ "Iosevka" ];
+        monospace = [ "Iosevka" ];
       };
     };
   };
