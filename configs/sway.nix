@@ -14,6 +14,8 @@
 let
   swayfont = "Iosevka Nerd Font";
   terminal = "${pkgs.alacritty}/bin/alacritty";
+  browser = "${pkgs.firefox}/bin/firefox";
+  pdf_reader = "${pkgs.zathura}/bin/zathura";
   wallpaper = "~/Dotfiles/wallpapers/cloud1.jpg";
   bemenu = "BEMENU_BACKEND=wayland ${pkgs.bemenu}/bin/bemenu-run -H 16 -p execute: -b --fn 'Terminus 9' --tf '#FFFFFF' --scf '#FFFFFF' --ff '#FFFFFF' --tb ''#FFFFFF --nf '#FFFFFF' --hf '#FFFFFF' --nb '#000000' --tb '#000000' --fb '#000000'";
   bemenu-run = "BEMENU_BACKEND=wayland ${pkgs.bemenu}/bin/bemenu-run --list \"10 down\"";
@@ -30,6 +32,8 @@ in
       defaultWorkspace = "workspace number 1";
       startup = [
         {command = "swaybg -i ${wallpaper}";}
+        {command = "${browser}";}
+
         
         # {command = "workspace number 2";}
         # {command = "discord";}
@@ -38,10 +42,12 @@ in
         # {command = "workspace number 1";}
       ];
       assigns = {
-        "1: web" = [{ class = "^(?i)firefox$"; }];
-        "2: discord" = [{ class = "^discord$";}];
+        "1: web" = [{ app_id = "(?i).*firefox.*"; }];
+        "2: discord" = [{ class = "(?i).*discord.*";}];
+        "3: notes" = [{ class = "(?i).*obsidian.*";}];
+        # "4: book" = [{ app_id = "(?i).*zathura.*";}];
         # "3: terminal" = [{ class = "^alacritty$";}];
-        "4: matrix" = [{ class = "^element$";}];
+        # "4: matrix" = [{ app_id = "element";}];
       };
 
       
@@ -67,9 +73,10 @@ in
           modifier = config.wayland.windowManager.sway.config.modifier;
         in lib.mkOptionDefault {
           "${modifier}+Return" = "exec ${terminal}";
-          "${modifier}+Shift+q" = "kill";
+          "${modifier}+q" = "kill";
           # "${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
           "${modifier}+d" = "exec ${launcher}";
+          "${modifier}+z" = "exec ${pdf_reader}";
 
           # Screenshot
           # "Print" = "exec ${pkgs.flameshot}/bin/flameshot gui";
@@ -112,21 +119,21 @@ in
 
     # CSS
     # needs to have fonts installed for this to work
-    style = 
-    ''
-      * {
-        border: none;
-        border-radius: 0;
-        font-family: ${swayfont};
-      }
-      window#waybar {
-        background: #16191C;
-        color: #AAB2BF;
-      }
-      #workspaces button {
-        padding: 0 5px;
-      }
-    '';
+    style = ./waybar.css;
+    # ''
+    #   * {
+    #     border: none;
+    #     border-radius: 0;
+    #     font-family: ${swayfont};
+    #   }
+    #   window#waybar {
+    #     background: #16191C;
+    #     color: #AAB2BF;
+    #   }
+    #   #workspaces button {
+    #     padding: 0 5px;
+    #   }
+    # '';
   
   };
 

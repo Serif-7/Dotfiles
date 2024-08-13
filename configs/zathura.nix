@@ -6,8 +6,6 @@ let
 in {
   programs.zathura = {
     enable = true;
-
-
     mappings = {
       "<Right>" = "navigate next";
       "<Left>" = "navigate previous";
@@ -21,11 +19,11 @@ in {
       inputbar-bg = theme.bg;
       inputbar-fg = theme.fg;
       notification-bg = theme.red;
-      notification-fg = theme.red;
+      notification-fg = theme.white;
       notification-error-bg = theme.red;
-      notification-error-fg = theme.red;
+      notification-error-fg = theme.white;
       notification-warning-bg = theme.red;
-      notification-warning-fg = theme.red;
+      notification-warning-fg = theme.white;
       highlight-color = theme.blue;
       highlight-active-color = theme.white;
       completion-bg = theme.bg;  

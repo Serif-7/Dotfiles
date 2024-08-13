@@ -9,6 +9,11 @@
       bind -k nul -M insert 'accept-autosuggestion'
     '';
 
+    functions = {
+      # move stuff to trash instead of deleting by default
+      rm = "mv $argv ~/.trash";
+    };
+
     shellAliases = {
       ls = "eza";
       "..." = "cd ../..";
@@ -18,11 +23,15 @@
       ps = "procs";
       find = "fd";
       cat = "bat -p";
-      stats = "bottom";
       # git = "gl";
 
       # default scan
       scan = "nmap -sC -sV -oA";
+    };
+    shellAbbrs = {
+      c = "cd";
+      g = "gl";
+      stats = "btm";
     };
   };
 }

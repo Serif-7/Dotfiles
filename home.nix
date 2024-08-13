@@ -102,6 +102,7 @@
       element-desktop
       age # encryption tool
       xfce.thunar # File Manager
+      wlsunset
 
       # Color Pickers
       gpick

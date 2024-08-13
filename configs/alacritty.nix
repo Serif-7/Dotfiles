@@ -27,6 +27,7 @@ in {
         };
         dynamic_padding = true;
         decorations = "None";
+        opacity = 0.8;
         #decorations = "Full";
       };
 
