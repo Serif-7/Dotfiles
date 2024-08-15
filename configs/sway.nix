@@ -16,6 +16,8 @@ let
   terminal = "${pkgs.alacritty}/bin/alacritty";
   browser = "${pkgs.firefox}/bin/firefox";
   pdf_reader = "${pkgs.zathura}/bin/zathura";
+  calculator = "";
+  notepad = "";
   wallpaper = "~/Dotfiles/wallpapers/cloud1.jpg";
   bemenu = "BEMENU_BACKEND=wayland ${pkgs.bemenu}/bin/bemenu-run -H 16 -p execute: -b --fn 'Terminus 9' --tf '#FFFFFF' --scf '#FFFFFF' --ff '#FFFFFF' --tb ''#FFFFFF --nf '#FFFFFF' --hf '#FFFFFF' --nb '#000000' --tb '#000000' --fb '#000000'";
   bemenu-run = "BEMENU_BACKEND=wayland ${pkgs.bemenu}/bin/bemenu-run --list \"10 down\"";
@@ -77,6 +79,18 @@ in
           # "${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
           "${modifier}+d" = "exec ${launcher}";
           "${modifier}+z" = "exec ${pdf_reader}";
+          # "${modifier}+c" = "";
+          # floating notepad for quick notes
+          # "${modifier}+n" = "";
+          
+          # journal entry
+          # open floating window with helix
+          "${modifier}+j" = "exec ~/Dotfiles/scripts/jrnl.fish";
+          
+          "${modifier}+minus" = "move scratchpad";
+          "${modifier}+plus" = "scratchpad show";
+
+
 
           # Screenshot
           # "Print" = "exec ${pkgs.flameshot}/bin/flameshot gui";

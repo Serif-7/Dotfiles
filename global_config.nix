@@ -5,7 +5,6 @@
   # nix.extraOptions = ''
   #   extra-experimental-features = nix-command flakes
   #   '';
-  programs.wshowkeys.enable = true;
 
   # enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -120,15 +119,13 @@
     ports = [ 22 ];
     settings = {
       PasswordAuthentication = true;
-      AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
+      AllowUsers = [ "daniel" "serif"]; # Allows all users by default. Can be [ "user1" "user2" ]
       UseDns = true;
       X11Forwarding = false;
       PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
     };
   };
 
-  # enable mullvad VPN
-  services.mullvad-vpn.enable = true;
 
   # Fonts
   fonts = {
@@ -149,4 +146,18 @@
     };
   };
 
+  # scripts run on every rebuild
+  system.activationScripts = {
+    
+  };
+
+  # enable mullvad VPN
+  services.mullvad-vpn.enable = true;
+
+  programs.wshowkeys.enable = true;
+
+  # virtual filesystem
+  services.gvfs.enable = true;
+  # storage device manipulation
+  services.udisks2.enable = true;
 }

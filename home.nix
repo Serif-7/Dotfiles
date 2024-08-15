@@ -55,54 +55,59 @@
       # Libraries
       SDL2
 
-      # User Programs
-      neovim
-      discord
-      helix
+      # CLI
       fish
       eza
-      obsidian
-      calibre
-      mullvad-vpn
-      steam
-      spotify
-      qbittorrent
       alacritty
-      anki
-      mpv
       du-dust # disk usage viewer
-      fzf
-      ripgrep
       tealdeer
       bottom
       gping # ping with a graph
       procs # process viewer
       zoxide
-      zathura # pdf reader
       most
       bat
       zellij
-      # nyxt # emacs-like browser
-        # still fails to build as of 8/06/2024
-      pandoc
-      tor-browser
-      kdePackages.konversation # IRC client
       neofetch
-      chromium
-      foliate # eBook reader
       yt-dlp
+      jrnl
+      age # encryption tool
+      clipboard-jh # Clipboard Manager
+
+      # User Programs
+      obsidian
+      calibre
+      mullvad-vpn
+      spotify
+      qbittorrent
+      anki
+      mpv
+      zathura # pdf reader
+      pandoc
       home-manager # standalone tool for managing HM config
       uxn
-      openmw
-      portmod
       image-roll # image viewer
-      jrnl
-      telegram-desktop
-      kdePackages.okular # PDF reader
-      element-desktop
-      age # encryption tool
       xfce.thunar # File Manager
       wlsunset
+      udiskie
+
+      # Games
+      steam
+      openmw
+      portmod
+
+      # Browsers
+      firefox
+      chromium
+      tor-browser
+      # nyxt # emacs-like browser
+        # still fails to build as of 8/06/2024
+
+      # Messaging
+      discord
+      telegram-desktop
+      element-desktop
+      kdePackages.konversation # IRC client
 
       # Color Pickers
       gpick
@@ -131,6 +136,8 @@
       # Office
       libreoffice
       focuswriter
+      foliate # eBook reader
+      kdePackages.okular # PDF reader
 
       # Languages
       zig
@@ -145,6 +152,10 @@
       racket # includes DrRacket
 
       # Dev Tools
+      helix
+      neovim
+      fzf
+      ripgrep
       git
       gitless # alternative git interface
       godot_4
@@ -164,10 +175,6 @@
       # Windows Stuff
       wineWowPackages.stable
       winetricks
-
-      # Build Tools
-      cmake
-      gnumake
 
       # Network Tools
       httpie
