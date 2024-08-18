@@ -38,7 +38,6 @@
       # System Tools
       file
       fd
-      ripgrep
       unzip
       zip
       xdg-utils
@@ -47,10 +46,8 @@
       efibootmgr
       wl-clipboard
       brightnessctl
-      # gnome.gnome-keyring
-      # busybox
-      # psmisc
       cacert
+      kanata-with-cmd # keyboard remapping
 
       # Libraries
       SDL2
@@ -59,6 +56,7 @@
       fish
       eza
       alacritty
+      ripgrep
       du-dust # disk usage viewer
       tealdeer
       bottom
@@ -120,7 +118,7 @@
       sway
       grim
       slurp
-      flameshot
+      flameshot.override { enableWlrSupport = true; }
       # mako
       swaynotificationcenter # notification daemon
       wofi
@@ -129,6 +127,7 @@
       swaylock
       waybar
       bemenu
+      cliphist # Clipboard Manager
       wev # Wayland Event Viewer
       wshowkeys # show keys pressed (for supported wl compositors)
       # hyprland
@@ -155,7 +154,6 @@
       helix
       neovim
       fzf
-      ripgrep
       git
       gitless # alternative git interface
       godot_4

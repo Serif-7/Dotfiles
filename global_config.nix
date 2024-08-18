@@ -160,4 +160,18 @@
   services.gvfs.enable = true;
   # storage device manipulation
   services.udisks2.enable = true;
+
+  # keyboard remapping
+  services.kanata = {
+    enable = true;
+    keyboards = {
+      # remap capslock to super key
+      "default".config = ''
+      (defsrc)
+      (deflayermap (base-layer)
+        caps lmet
+        )
+      '';
+    };
+  };
 }
