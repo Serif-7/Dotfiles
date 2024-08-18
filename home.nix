@@ -24,7 +24,9 @@
   # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
   home.file.".lldbinit".source = ./configs/lldbinit;
   home.file."./.config/helix/config.toml".source = ./configs/helix/helix.toml;
-  # home.file."./.config/swat/config".source = ./configs/sway/config;
+  # waybar settings
+  home.file."./.config/waybar/config.jsonc".source = ./configs/waybar/waybar.jsonc;
+  # home.file."./.config/sway/config".source = ./configs/sway/config;
 
   # Fonts
   home.file."./.local/share/fonts/Fraktion.otf".source = ./fonts/fraktion.otf;
@@ -103,6 +105,8 @@
 
       # Messaging
       discord
+      vesktop
+      xwaylandvideobridge
       telegram-desktop
       element-desktop
       kdePackages.konversation # IRC client
@@ -118,7 +122,7 @@
       sway
       grim
       slurp
-      flameshot.override { enableWlrSupport = true; }
+      (flameshot.override { enableWlrSupport = true; })
       # mako
       swaynotificationcenter # notification daemon
       wofi

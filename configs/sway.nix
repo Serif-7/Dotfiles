@@ -115,7 +115,8 @@ in
           # "${modifier}+p" = "exec echo 'SCREENSHOT'";
 
           # Saves image and copies to clipboard
-          "Print" = "exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%s).png && grim $IMG && wl-copy -t image/png < $IMG";
+          # "Print" = "exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%s).png && grim $IMG && wl-copy -t image/png < $IMG";
+          "Print" = "exec flameshot gui --clipboard";
 
           # lower/raise brightness
           "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
@@ -145,9 +146,11 @@ in
       target = "sway-session.target";
     };
 
+    # settings = import ./waybar.nix;
+
     # CSS
     # needs to have fonts installed for this to work
-    style = ./waybar.css;
+    style = ./waybar/waybar.css;
     # ''
     #   * {
     #     border: none;

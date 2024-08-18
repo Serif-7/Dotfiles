@@ -24,6 +24,7 @@
 
   ### Window Manager / Desktop Environment
   
+  programs.sway.enable = true;
   security.polkit.enable = true; # controls privileges for processes
   # necessary to enable to make sway work in home-manager
 
@@ -31,6 +32,10 @@
   # without this option it will not accept the user password
   # as it will have no access to it
   security.pam.services.swaylock = {};
+
+  # enable desktop portal for wlroots compositors
+  # xdg.portal.wlr.enable = true;
+  # xdg.portal.config.common.default = "*";
 
   # Enable the GNOME Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
@@ -162,16 +167,16 @@
   services.udisks2.enable = true;
 
   # keyboard remapping
-  services.kanata = {
-    enable = true;
-    keyboards = {
-      # remap capslock to super key
-      "default".config = ''
-      (defsrc)
-      (deflayermap (base-layer)
-        caps lmet
-        )
-      '';
-    };
-  };
+  # services.kanata = {
+  #   enable = true;
+  #   keyboards = {
+  #     # remap capslock to super key
+  #     "default".config = ''
+  #     (defsrc)
+  #     (deflayermap (base-layer)
+  #       caps lmet
+  #       )
+  #     '';
+  #   };
+  # };
 }
