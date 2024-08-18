@@ -162,15 +162,18 @@
       love
       cargo
       libgcc
-      gdb
       docker
-      lua-language-server
-      zls # Zig Language Server
-      nil # Nix Language Server
+      ## Debuggers
+      gdb
       lldb #debugger
       delve # go debugger
       direnv
       jq
+      ## LSP
+      lua-language-server
+      zls # Zig Language Server
+      nil # Nix Language Server
+      ruby-lsp # Ruby Language Server
 
       # Windows Stuff
       wineWowPackages.stable

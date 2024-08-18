@@ -2,7 +2,7 @@
 
 
 let
-  theme= import ./kanagawa.nix;
+  theme = import ./kanagawa.nix;
 in {
   programs.zathura = {
     enable = true;

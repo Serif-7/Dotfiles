@@ -16,6 +16,7 @@ let
   terminal = "${pkgs.alacritty}/bin/alacritty";
   browser = "${pkgs.firefox}/bin/firefox";
   pdf_reader = "${pkgs.zathura}/bin/zathura";
+  music_player = "${pkgs.spotify}/bin/spotify";
   calculator = "";
   notepad = "";
   wallpaper = "~/Dotfiles/wallpapers/cloud1.jpg";
@@ -79,16 +80,29 @@ in
           # "${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --";
           "${modifier}+d" = "exec ${launcher}";
           "${modifier}+z" = "exec ${pdf_reader}";
+          "${modifier}+m" = "exec ${music_player}";
           # "${modifier}+c" = "";
           # floating notepad for quick notes
           # "${modifier}+n" = "";
           
           # journal entry
           # open floating window with helix
-          "${modifier}+j" = "exec ~/Dotfiles/scripts/jrnl.fish";
+          # "${modifier}+j" = "exec ~/Dotfiles/scripts/jrnl.fish";
           
+           # move window to scratchpad
           "${modifier}+minus" = "move scratchpad";
-          "${modifier}+plus" = "scratchpad show";
+          # cycle through scratchpad windows
+          "${modifier}+equal" = "scratchpad show";
+
+          # split window horizontal
+          "${modifier}+h" = "splith";
+          # split window vertical
+          "${modifier}+v" = "splitv";
+
+          # toggle between floating/tiling
+          # can be used to remove windows from scratchpad
+          # (scratchpad windows are normal floating windows)
+          "${modifier}+space" = "floating toggle";
 
 
 
@@ -160,16 +174,17 @@ in
     # idle daemon
     swayidle = {
       enable = true;
+      systemdTarget = "sway-session.target";
 
       events = [
-        # { event = "before-sleep"; command = "${swaylockcmd}";}
+        { event = "before-sleep"; command = "${swaylockcmd}";}
         { event = "lock"; command = "${swaylockcmd}";}
       ];
 
       timeouts = [
         # 5 minutes to lock, 10 minutes to suspend
         { timeout = 500; command = "${swaylockcmd}"; }
-        { timeout = 1000; command = "${pkgs.systemd}/bin/systemctl suspend"; }
+        # { timeout = 1000; command = "${pkgs.systemd}/bin/systemctl suspend"; }
       ];
     };
 
