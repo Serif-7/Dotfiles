@@ -78,6 +78,7 @@
       obsidian
       calibre
       mullvad-vpn
+      openvpn
       spotify
       qbittorrent
       anki
@@ -204,6 +205,7 @@
       thc-hydra # network logon cracker
       imhex # hex editor
       dsniff # Collection of programs including a TCP sniffer
+      ssh-audit # check for SSH vulns
     
     ];
 
