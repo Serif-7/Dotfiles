@@ -53,6 +53,7 @@
 
       # Libraries
       SDL2
+      raylib
 
       # CLI
       fish
