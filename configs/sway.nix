@@ -48,6 +48,7 @@ in
         "1: web" = [{ app_id = "(?i).*firefox.*"; }];
         "2: discord" = [{ class = "(?i).*discord.*";}];
         "3: notes" = [{ class = "(?i).*obsidian.*";}];
+        "11: torrents" = [{ class = "(?i).*qbittorrent.*";}];
         # "4: book" = [{ app_id = "(?i).*zathura.*";}];
         # "3: terminal" = [{ class = "^alacritty$";}];
         # "4: matrix" = [{ app_id = "element";}];

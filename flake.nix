@@ -4,7 +4,6 @@
 
   # https://wiki.nixos.org/wiki/Flakes
 
-  # plain attrset
   inputs = {
     nixpkgs = {
       #unstable is not cached
@@ -16,10 +15,10 @@
       };
   };
 
-  # function that returns an attrset
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
 
     {
+      # Laptop
       nixosConfigurations.Yeats = nixpkgs.lib.nixosSystem {
         modules = [ 
 
@@ -32,6 +31,7 @@
         specialArgs = { inherit inputs; };
 
        };
+      # Desktop
       nixosConfigurations.Chaucer = nixpkgs.lib.nixosSystem {
         modules = [ 
       
@@ -39,6 +39,17 @@
         ./hosts/Chaucer/configuration.nix
         ./configs/steam.nix
         ./hm.nix
+
+        ];
+        specialArgs = { inherit inputs; };
+
+       };
+      # Desktop
+      nixosConfigurations.Melville = nixpkgs.lib.nixosSystem {
+        modules = [ 
+      
+        ./global_config.nix
+        ./hosts/Melville/configuration.nix
 
         ];
         specialArgs = { inherit inputs; };
