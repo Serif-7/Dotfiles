@@ -48,8 +48,10 @@
       nixosConfigurations.Melville = nixpkgs.lib.nixosSystem {
         modules = [ 
       
-        ./global_config.nix
+        ./server_config.nix
         ./hosts/Melville/configuration.nix
+        ./hm.nix
+        ./modules/minecraft.nix
 
         ];
         specialArgs = { inherit inputs; };
