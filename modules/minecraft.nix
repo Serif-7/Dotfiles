@@ -1,9 +1,25 @@
+{ config, pkgs, ... }:
+
+# this module handles a complete minecraft server setup, including
+# a mod manager
+
 {
+  environment.systemPackages = with pkgs; [
+    ferium # mod manager
+    mcrcon # remote management tool
+    # zulu # certified build of openjdk
+    graalvm-ce # Optimized Java
+    tmux # necessary to detach server
+  ];
+
   services.minecraft-server = {
-    enable = true;
+    enable = false;
     eula = true;
+    package = pkgs.minecraft-server.override { version = "1.20.1"; };
+    openFirewall = true;
     declarative = true;
     whitelist = {
+      # https://mcuuid.net/ # get UUID for username here
       Serif7 = "cb05c650-737e-4973-8032-2fed7579d620";
     };
     serverProperties = {
@@ -19,6 +35,8 @@
       # disabling it to be safe
       snooper-enabled = false;
       white-list = true;
+      enable-rcon = true;
+      "rcon.password" = "minecraft-melville";
     };
   };
 }
