@@ -50,16 +50,19 @@
   };
 
   systemd.services."backup-world" = {
+    path = [
+      "${pkgs.scp}/bin/scp"
+    ];
     script = ''
       set -eu
-      DATE=$(${pkgs}/bin/date +%d%m%Y)
+      DATE=$(date +%d%m%Y)
       WORLD_PATH="/home/daniel/Melville"
       BACKUP_PATH="/home/daniel/Backups/Melville/$DATE"
       REMOTE_HOST="daniel@chaucer"
       # local backup
-      ${pkgs}/bin/scp -r "$WORLD_PATH" "$BACKUP_PATH"
+      scp -r "$WORLD_PATH" "$BACKUP_PATH"
       # remote backup (may fail)
-      ${pkgs}/bin/scp -r "~/Melville" "$REMOTE_HOST:$BACKUP_PATH"
+      scp -r "~/Melville" "$REMOTE_HOST:$BACKUP_PATH"
     '';
     serviceConfig = {
       Type = "oneshot";
