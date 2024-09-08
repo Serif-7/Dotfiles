@@ -81,6 +81,7 @@
       mullvad-vpn
       openvpn
       spotify
+      spotify-player
       qbittorrent
       anki
       mpv
@@ -97,6 +98,8 @@
       steam
       openmw
       portmod
+      prismlauncher
+      hmcl
 
       # Browsers
       firefox
@@ -178,6 +181,8 @@
       zls # Zig Language Server
       nil # Nix Language Server
       ruby-lsp # Ruby Language Server
+      gopls # Go Language Server
+      rust-analyzer # Rust Language Server
 
       # Windows Stuff
       wineWowPackages.stable

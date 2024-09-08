@@ -39,4 +39,32 @@
       "rcon.password" = "minecraft-melville";
     };
   };
+
+  # back up ~/Melville once a day
+  systemd.timers."backup-world" = {
+    wantedBy = [ "timers.target" ];
+      timerConfig = {
+        onCalendar = "daily";
+        Unit = "backup-world.service";
+      };
+  };
+
+  systemd.services."backup-world" = {
+    script = ''
+      set -eu
+      DATE=$(${pkgs}/bin/date +%d%m%Y)
+      WORLD_PATH="/home/daniel/Melville"
+      BACKUP_PATH="/home/daniel/Backups/Melville/$DATE"
+      REMOTE_HOST="daniel@chaucer"
+      # local backup
+      ${pkgs}/bin/scp -r $WORLD_PATH $BACKUP_PATH
+      # remote backup (may fail)
+      ${pkgs}/bin/scp -r ~/Melville $REMOTE_HOST:$BACKUP_PATH
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+    };
+  };
+
 }

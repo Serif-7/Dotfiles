@@ -113,9 +113,9 @@
     ];
 
     # address for hosts when at home
-
     "192.168.0.93" = ["chaucer"];
     "192.168.0.163" = ["yeats"];
+    "192.168.0.61" = ["melville"];
   };
 
   # SSH config

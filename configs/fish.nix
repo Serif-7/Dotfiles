@@ -25,6 +25,11 @@
       download_yt_audio = ''
         yt-dlp --extract-audio --audio-format mp3 --audio-quality 0 $argv[1] -o "$argv[2].%(ext)s"
       '';
+
+      # send all items in folder to specified computer on server
+      send_to_server = ''
+        scp * "daniel@Melville:~/Melville/computercraft/computer/$argv[1]"
+      '';
     };
 
     shellAliases = {
