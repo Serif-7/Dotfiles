@@ -51,7 +51,7 @@
 
   systemd.services."backup-world" = {
     path = [
-      "${pkgs.scp}/bin/scp"
+      "${pkgs.openssh}/bin/scp"
     ];
     script = ''
       set -eu
