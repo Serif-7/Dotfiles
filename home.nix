@@ -31,6 +31,9 @@
   # Fonts
   home.file."./.local/share/fonts/Fraktion.otf".source = ./fonts/fraktion.otf;
 
+  # jrnl config file
+  home.file."./.config/jrnl/jrnl.yaml".source = ./configs/jrnl.yaml;
+  
   home = {
     /* The home.stateVersion option does not have a default and must be set */
     stateVersion = "18.09";
@@ -38,6 +41,7 @@
     packages = with pkgs; [
 
       # System Tools
+      coreutils
       file
       fd
       unzip
@@ -76,6 +80,7 @@
       clipboard-jh # Clipboard Manager
 
       # User Programs
+      jrnl
       obsidian
       calibre
       mullvad-vpn
@@ -161,6 +166,7 @@
 
       # Dev Tools
       helix
+      emacs
       neovim
       fzf
       git
@@ -212,6 +218,7 @@
       imhex # hex editor
       dsniff # Collection of programs including a TCP sniffer
       ssh-audit # check for SSH vulns
+      nikto # web server scanner
     
     ];
 
