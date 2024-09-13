@@ -23,16 +23,16 @@
   # xdg.configFile."../.lldbinit".source = ./configs/lldbinit;
   # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
   home.file.".lldbinit".source = ./configs/lldbinit;
-  home.file."./.config/helix/config.toml".source = ./configs/helix/helix.toml;
+  home.file.".config/helix/config.toml".source = ./configs/helix/helix.toml;
   # waybar settings
-  home.file."./.config/waybar/config.jsonc".source = ./configs/waybar/waybar.jsonc;
+  home.file.".config/waybar/config.jsonc".source = ./configs/waybar/waybar.jsonc;
   # home.file."./.config/sway/config".source = ./configs/sway/config;
 
   # Fonts
-  home.file."./.local/share/fonts/Fraktion.otf".source = ./fonts/fraktion.otf;
+  home.file.".local/share/fonts/Fraktion.otf".source = ./fonts/fraktion.otf;
 
   # jrnl config file
-  home.file."./.config/jrnl/jrnl.yaml".source = ./configs/jrnl.yaml;
+  home.file.".config/jrnl/jrnl.yaml".source = ./configs/jrnl.yaml;
   
   home = {
     /* The home.stateVersion option does not have a default and must be set */
