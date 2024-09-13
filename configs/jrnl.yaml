@@ -11,7 +11,7 @@ highlight: true
 indent_character: '|'
 journals:
   default:
-    journal: /home/daniel/Notes/remote-default/journal/jrnl_4.md
+    journal: /home/daniel/Notes/journal/jrnl_4.md
 linewrap: 79
 tagsymbols: '#@'
 template: false

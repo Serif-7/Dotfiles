@@ -80,7 +80,6 @@
       clipboard-jh # Clipboard Manager
 
       # User Programs
-      jrnl
       obsidian
       calibre
       mullvad-vpn
