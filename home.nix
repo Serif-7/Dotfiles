@@ -24,6 +24,7 @@
   # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
   home.file.".lldbinit".source = ./configs/lldbinit;
   home.file.".config/helix/config.toml".source = ./configs/helix/helix.toml;
+  home.file.".config/helix/languages.toml".source = ./configs/helix/languages.toml;
   # waybar settings
   home.file.".config/waybar/config.jsonc".source = ./configs/waybar/waybar.jsonc;
   # home.file."./.config/sway/config".source = ./configs/sway/config;
@@ -101,9 +102,9 @@
       # Games
       steam
       openmw
-      portmod
+      # portmod
       prismlauncher
-      hmcl
+      protonup-ng # tool to install proton-ge
 
       # Browsers
       firefox
@@ -188,6 +189,9 @@
       ruby-lsp # Ruby Language Server
       gopls # Go Language Server
       rust-analyzer # Rust Language Server
+      uv # Python package manager
+      pylyzer # Python Language Server
+      ruff # Python Linter
 
       # Windows Stuff
       wineWowPackages.stable

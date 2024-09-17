@@ -1,0 +1,10 @@
+[[language]]
+name = "python"
+language-servers = ["ruff", "pylyzer"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+[language-server.pylyzer]
+command = "pylyzer"
+config = { settings = { args = ["--server"] } }
