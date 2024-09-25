@@ -98,6 +98,12 @@
       xfce.thunar # File Manager
       wlsunset
       udiskie
+      p7zip
+
+      # Virtual Machines
+      qemu
+      virt-manager
+      libvirt
 
       # Games
       steam
@@ -190,8 +196,9 @@
       gopls # Go Language Server
       rust-analyzer # Rust Language Server
       uv # Python package manager
-      pylyzer # Python Language Server
+      pyright # Python Language Server
       ruff # Python Linter
+      ruff-lsp
 
       # Windows Stuff
       wineWowPackages.stable
@@ -202,12 +209,14 @@
       wireshark
       tcpdump
       socat
+      netcat-openbsd
       wget
       curl
       dogdns # DNS client
 
       # Hacker Tools
       nmap
+      rustscan # port scanner
       ffuf
       feroxbuster # recursive content discovery tool
       burpsuite
@@ -222,6 +231,10 @@
       dsniff # Collection of programs including a TCP sniffer
       ssh-audit # check for SSH vulns
       nikto # web server scanner
+      # brutespray # bruteforces services found in nmap data with default creds
+      # asnmap # https://github.com/projectdiscovery/asnmap
+      wordlists # `wordlists_path` shows path, `wordlists` lists... lists
+      filezilla
     
     ];
 

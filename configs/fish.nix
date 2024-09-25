@@ -30,6 +30,17 @@
       send_to_server = ''
         scp * "daniel@Melville:~/Melville/computercraft/computer/$argv[1]"
       '';
+
+      # Reverse shell listener
+      listener = ''
+        echo "Listening on port $argv[1]";
+        socat - TCP-LISTEN:$argv[1],fork
+      '';
+      
+      search_file = ''
+        rg --files | rg $argv[1]
+      '';
+
     };
 
     shellAliases = {

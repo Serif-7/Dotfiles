@@ -26,6 +26,7 @@
         ./hosts/Yeats/configuration.nix
         ./configs/steam.nix
         ./hm.nix
+        ./modules/networking.nix
       
         ];
         specialArgs = { inherit inputs; };
@@ -39,6 +40,7 @@
         ./hosts/Chaucer/configuration.nix
         ./configs/steam.nix
         ./hm.nix
+        ./modules/networking.nix
 
         ];
         specialArgs = { inherit inputs; };
