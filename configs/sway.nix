@@ -116,7 +116,7 @@ in
           # "${modifier}+p" = "exec echo 'SCREENSHOT'";
 
           # Saves image and copies to clipboard
-          "Print" = "exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%s).png && grim $IMG && wl-copy -t image/png < $IMG";
+          "Print" = "exec IMG=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%s).png && grim -g \"$(slurp)\" $IMG && wl-copy -t image/png < $IMG";
           # "Print" = "exec flameshot gui --clipboard";
 
           # lower/raise brightness
