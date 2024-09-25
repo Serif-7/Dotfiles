@@ -36,9 +36,9 @@
         echo "Listening on port $argv[1]";
         socat - TCP-LISTEN:$argv[1],fork
       '';
-      
-      search_file = ''
-        rg --files | rg $argv[1]
+
+      scan = ''
+        nmap -sC -sV -oA $argv[1]
       '';
 
     };
@@ -53,9 +53,6 @@
       find = "fd";
       cat = "bat -p";
       # git = "gl";
-
-      # default scan
-      scan = "nmap -sC -sV -oA";
     };
     shellAbbrs = {
       c = "cd";
