@@ -169,6 +169,7 @@
       go
       sbcl # Common Lisp
       racket # includes DrRacket
+      nasm # Assembler
 
       # Dev Tools
       helix
