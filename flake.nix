@@ -24,7 +24,7 @@
 
         ./global_config.nix
         ./hosts/Yeats/configuration.nix
-        ./configs/steam.nix
+        ./modules/steam.nix
         ./hm.nix
         ./modules/networking.nix
       
@@ -38,7 +38,7 @@
       
         ./global_config.nix
         ./hosts/Chaucer/configuration.nix
-        ./configs/steam.nix
+        ./modules/steam.nix
         ./hm.nix
         ./modules/networking.nix
 

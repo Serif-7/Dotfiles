@@ -1,7 +1,8 @@
 
 * hosts/: host-specific configuration files
 * global_config: global system configuration for all hosts
-* configs/: program-specific configuration files
+* modules/: files to handle specific tasks such as networking, steam setup
+* hm_modules/: program-specific configuration files
 * scripts/: miscellaneous code, currently contains debugger scripts
 * shells/: devshells / environments
 * home.nix: home-manager profile and package list
@@ -16,4 +17,4 @@
 * Always make user `daniel`
 * add host specific config to `flake.nix` and `hosts/`
 * add ssh keys
-* add host to known hosts
+* add host to known hosts in `modules/networking.nix`

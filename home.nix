@@ -1,4 +1,3 @@
-
 { config, pkgs, ... }:
 
 # home manager profile for serif
@@ -6,11 +5,11 @@
 {
   imports = [
     # ./configs/helix.nix
-    ./configs/sway.nix
-    ./configs/fish.nix
-    ./configs/tealdeer.nix
-    ./configs/alacritty.nix
-    ./configs/zathura.nix
+    ./hm_modules/sway.nix
+    ./hm_modules/fish.nix
+    ./hm_modules/tealdeer.nix
+    ./hm_modules/alacritty.nix
+    ./hm_modules/zathura.nix
     # ./configs/flameshot.nix
   ];
 
@@ -228,7 +227,6 @@
       aircrack-ng
       wifite2
       thc-hydra # network logon cracker
-      imhex # hex editor
       dsniff # Collection of programs including a TCP sniffer
       ssh-audit # check for SSH vulns
       nikto # web server scanner
@@ -236,6 +234,12 @@
       # asnmap # https://github.com/projectdiscovery/asnmap
       wordlists # `wordlists_path` shows path, `wordlists` lists... lists
       filezilla
+
+      # Reverse Engineering Tools
+      binsider
+      cutter
+      imhex # hex editor
+      pwndbg
     
     ];
 
