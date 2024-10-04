@@ -21,18 +21,18 @@
   # xdg.configHome = "${config.home.homeDirectory}/.config";
   # xdg.configFile."../.lldbinit".source = ./configs/lldbinit;
   # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
-  home.file.".lldbinit".source = ./configs/lldbinit;
-  home.file.".config/helix/config.toml".source = ./configs/helix/helix.toml;
-  home.file.".config/helix/languages.toml".source = ./configs/helix/languages.toml;
+  home.file.".lldbinit".source = ./hm_modules/lldbinit;
+  home.file.".config/helix/config.toml".source = ./hm_modules/helix/helix.toml;
+  home.file.".config/helix/languages.toml".source = ./hm_modules/helix/languages.toml;
   # waybar settings
-  home.file.".config/waybar/config.jsonc".source = ./configs/waybar/waybar.jsonc;
-  # home.file."./.config/sway/config".source = ./configs/sway/config;
+  home.file.".config/waybar/config.jsonc".source = ./hm_modules/waybar/waybar.jsonc;
+  # home.file."./.config/sway/config".source = ./hm_modules/sway/config;
 
   # Fonts
   home.file.".local/share/fonts/Fraktion.otf".source = ./fonts/fraktion.otf;
 
   # jrnl config file
-  home.file.".config/jrnl/jrnl.yaml".source = ./configs/jrnl.yaml;
+  home.file.".config/jrnl/jrnl.yaml".source = ./hm_modules/jrnl.yaml;
   
   home = {
     /* The home.stateVersion option does not have a default and must be set */
