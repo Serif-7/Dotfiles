@@ -119,8 +119,6 @@
         # still fails to build as of 8/06/2024
 
       # Messaging
-      discord
-      vesktop
       xwaylandvideobridge
       telegram-desktop
       element-desktop

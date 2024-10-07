@@ -78,6 +78,7 @@
     grim
     slurp
     mako
+    discord
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
