@@ -111,6 +111,9 @@
       prismlauncher
       protonup-ng # tool to install proton-ge
 
+      # Emulators
+      mupen64plus
+
       # Browsers
       firefox
       chromium
@@ -158,6 +161,7 @@
       # Languages
       zig
       gcc
+      cosmocc
       ruby
       lua
       rustc
