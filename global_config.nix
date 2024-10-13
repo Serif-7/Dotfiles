@@ -13,7 +13,7 @@
   users.users.daniel = {
     isNormalUser = true;
     description = "Serif";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "vboxusers"];
     packages = with pkgs; [
       firefox
       fish
@@ -149,8 +149,6 @@
   # storage device manipulation
   services.udisks2.enable = true;
 
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
 
   # keyboard remapping
   # services.kanata = {

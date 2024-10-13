@@ -99,11 +99,6 @@
       udiskie
       p7zip
 
-      # Virtual Machines
-      qemu
-      virt-manager
-      libvirt
-
       # Games
       steam
       openmw

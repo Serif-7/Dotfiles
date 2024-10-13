@@ -41,6 +41,7 @@
         ./modules/steam.nix
         ./hm.nix
         ./modules/networking.nix
+        ./modules/virtualization.nix
 
         ];
         specialArgs = { inherit inputs; };
