@@ -143,6 +143,16 @@ YYY:::::Y   Y:::::YYYeeeeeeeeeeee    aaaaaaaaaaaaa  ttttttt:::::ttttttt        s
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # block timewasting sites
+  networking.hosts = {
+    "0.0.0.0" = [
+      "www.twitter.com" "twitter.com" "www.x.com" "x.com"
+      "www.news.ycombinator" "news.ycombinator.com"
+      "www.youtube.com" "youtube.com"
+      "www.4channel.org" "www.4chan.org"
+    ];
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
