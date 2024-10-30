@@ -98,6 +98,7 @@
       wlsunset
       udiskie
       p7zip
+      discord
 
       # Games
       steam

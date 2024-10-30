@@ -40,8 +40,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -146,10 +146,10 @@ YYY:::::Y   Y:::::YYYeeeeeeeeeeee    aaaaaaaaaaaaa  ttttttt:::::ttttttt        s
   # block timewasting sites
   networking.hosts = {
     "0.0.0.0" = [
-      "www.twitter.com" "twitter.com" "www.x.com" "x.com"
-      "www.news.ycombinator" "news.ycombinator.com"
-      "www.youtube.com" "youtube.com"
-      "www.4channel.org" "www.4chan.org"
+      # "www.twitter.com" "twitter.com" "www.x.com" "x.com"
+      # "www.news.ycombinator" "news.ycombinator.com"
+      # "www.youtube.com" "youtube.com"
+      # "www.4channel.org" "www.4chan.org"
     ];
   };
 

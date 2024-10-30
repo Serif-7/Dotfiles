@@ -25,6 +25,7 @@
         ./global_config.nix
         ./hosts/Yeats/configuration.nix
         ./modules/steam.nix
+        ./modules/xfce.nix
         ./hm.nix
         ./modules/networking.nix
       
@@ -39,6 +40,7 @@
         ./global_config.nix
         ./hosts/Chaucer/configuration.nix
         ./modules/steam.nix
+        ./modules/sway.nix
         ./hm.nix
         ./modules/networking.nix
         ./modules/virtualization.nix
