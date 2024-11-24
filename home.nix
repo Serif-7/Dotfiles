@@ -234,6 +234,8 @@
       # asnmap # https://github.com/projectdiscovery/asnmap
       wordlists # `wordlists_path` shows path, `wordlists` lists... lists
       filezilla
+      net-snmp
+      smbmap
 
       # Reverse Engineering Tools
       binsider

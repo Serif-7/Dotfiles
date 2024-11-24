@@ -40,7 +40,7 @@
         ./global_config.nix
         ./hosts/Chaucer/configuration.nix
         ./modules/steam.nix
-        ./modules/sway.nix
+        ./modules/xfce.nix
         ./hm.nix
         ./modules/networking.nix
         ./modules/virtualization.nix
@@ -49,7 +49,7 @@
         specialArgs = { inherit inputs; };
 
        };
-      # Desktop
+      # Server
       nixosConfigurations.Melville = nixpkgs.lib.nixosSystem {
         modules = [ 
       
