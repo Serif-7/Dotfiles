@@ -1,0 +1,67 @@
+# Display assembly in Intel syntax instead of AT&T
+set disassembly-flavor intel
+
+# Enable pretty-printing for better structured data display
+set print pretty on
+
+# Print array indexes when displaying arrays
+set print array-indexes on
+
+# Enable printing of static members
+set print static-members on
+
+# Don't paginate output
+set height 0
+set pagination off
+
+# Save command history
+set history save on
+set history filename ~/.gdb_history
+set history size 10000
+
+# Follow child processes on fork
+set follow-fork-mode child
+
+# Don't stop on signals that we commonly encounter
+handle SIGPIPE nostop noprint pass
+handle SIG32 nostop noprint pass
+
+# Define a format for printing timestamps in breakpoint messages
+set timestamp format "%H:%M:%S"
+
+# Enable timestamps for logging
+set logging file gdb.txt
+set logging on
+
+# Custom convenience functions
+define cls
+    shell clear
+end
+
+# Print registers in a more readable format
+define regs
+    info registers eax ebx ecx edx esi edi ebp esp eip eflags
+end
+
+# Examine stack with 20 entries
+define stack
+    x/20xg $rsp
+end
+
+# Enhanced backtrace with locals
+define btl
+    bt
+    frame
+    info locals
+end
+
+# Memory leak detection helper (requires Python support)
+python
+import gdb
+
+def detect_leaks():
+    gdb.execute("set environment MALLOC_CHECK_=3")
+    gdb.execute("run")
+
+gdb.Command("detect-leaks", gdb.COMMAND_USER)(detect_leaks)
+end

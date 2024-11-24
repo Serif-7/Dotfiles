@@ -22,6 +22,7 @@
   # xdg.configFile."../.lldbinit".source = ./configs/lldbinit;
   # xdg.configFile."./helix/config.toml".source = ./configs/helix.toml;
   home.file.".lldbinit".source = ./hm_modules/lldbinit;
+  home.file.".gdbinit".source = ./hm_modules/gdbinit;
   home.file.".config/helix/config.toml".source = ./hm_modules/helix/helix.toml;
   home.file.".config/helix/languages.toml".source = ./hm_modules/helix/languages.toml;
   # waybar settings
@@ -78,6 +79,7 @@
       jrnl
       age # encryption tool
       clipboard-jh # Clipboard Manager
+      rx # pixel editor
 
       # User Programs
       obsidian
