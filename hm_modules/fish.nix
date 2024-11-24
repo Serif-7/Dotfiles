@@ -41,13 +41,17 @@
         nmap -sC -sV -oA $argv[1]
       '';
 
+      cdtemp = ''
+        cd $(mktemp -d)
+      '';
+
     };
 
     shellAliases = {
       ls = "eza";
       "..." = "cd ../..";
       "...." = "cd ../../..";
-      grep = "rg";
+      search = "rg";
       ping = "gping";
       ps = "procs";
       find = "fd";

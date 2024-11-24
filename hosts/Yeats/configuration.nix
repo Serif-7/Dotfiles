@@ -40,8 +40,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -142,6 +142,16 @@ YYY:::::Y   Y:::::YYYeeeeeeeeeeee    aaaaaaaaaaaaa  ttttttt:::::ttttttt        s
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # block timewasting sites
+  networking.hosts = {
+    "0.0.0.0" = [
+      # "www.twitter.com" "twitter.com" "www.x.com" "x.com"
+      # "www.news.ycombinator" "news.ycombinator.com"
+      # "www.youtube.com" "youtube.com"
+      # "www.4channel.org" "www.4chan.org"
+    ];
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
