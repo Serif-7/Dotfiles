@@ -212,7 +212,9 @@
       netcat-openbsd
       wget
       curl
+      dig # DNS client
       dogdns # DNS client
+      inetutils
 
       # Hacker Tools
       nmap
@@ -223,6 +225,7 @@
       hashcat
       john # password cracker
       metasploit
+      exploitdb # searchsploit
       sqlmap
       aircrack-ng
       wifite2
@@ -236,6 +239,8 @@
       filezilla
       net-snmp
       smbmap
+      samba4Full
+      whatweb # website scanner
 
       # Reverse Engineering Tools
       binsider

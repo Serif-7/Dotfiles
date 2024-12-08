@@ -38,7 +38,11 @@
       '';
 
       scan = ''
-        nmap -sC -sV -oA $argv[1]
+        nmap -sC -sV $argv
+      '';
+
+      dirbust = ''
+        feroxbuster -u $argv[1] -w (wordlists_path)/seclists/Discovery/Web-Content/common.txt $argv[2..-1]
       '';
 
       cdtemp = ''
