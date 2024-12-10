@@ -24,6 +24,7 @@
 
     firewall = {
       allowedTCPPorts = [
+        21
         22
         1337
         4444 # default meterpreter port

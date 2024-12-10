@@ -56,9 +56,9 @@
       "..." = "cd ../..";
       "...." = "cd ../../..";
       search = "rg";
-      ping = "gping";
-      ps = "procs";
-      find = "fd";
+      # ping = "gping";
+      # ps = "procs";
+      # find = "fd";
       cat = "bat -p";
       cdtemp = "cd $(mktemp -d)";
       # git = "gl";
