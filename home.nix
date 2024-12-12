@@ -101,6 +101,7 @@
       udiskie
       p7zip
       discord
+      krita
 
       # Games
       steam
@@ -241,6 +242,7 @@
       smbmap
       samba4Full
       whatweb # website scanner
+      python312Packages.impacket
 
       # Reverse Engineering Tools
       binsider
