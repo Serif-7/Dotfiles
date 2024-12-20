@@ -120,7 +120,8 @@
     enableDefaultPackages = true;
 
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" "Iosevka"]; })
+      nerd-fonts.fira-code
+      nerd-fonts.iosevka
       ubuntu_font_family
       liberation_ttf
     ];
