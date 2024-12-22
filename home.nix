@@ -240,6 +240,7 @@
       filezilla
       net-snmp
       smbmap
+      netexec # fork of crackmapexec
       samba4Full
       whatweb # website scanner
       python312Packages.impacket
