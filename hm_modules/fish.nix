@@ -41,6 +41,7 @@
         nmap -sC -sV $argv
       '';
 
+      # dirbust <domain>
       dirbust = ''
         feroxbuster -u $argv[1] -w (wordlists_path)/seclists/Discovery/Web-Content/common.txt $argv[2..-1]
       '';
@@ -55,10 +56,10 @@
       end
       '';
 
-      # domain first arg, IP second
+      # enum_subdomains <domain> <IP>
       enum_subdomains = ''
         for sub in $(cat $(wordlists_path)/seclists/Discovery/DNS/subdomains-top1million-110000.txt);
-          dig $argv[1].inlanefreight.htb @argv[2] | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;
+          dig $argv[1].inlanefreight.htb @$argv[2] | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;
         end
       '';
 
