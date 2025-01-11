@@ -49,6 +49,19 @@
         cd $(mktemp -d)
       '';
 
+      testfunc = ''
+      for word in $(cat $(wordlists_path)/seclists/Discovery/DNS/subdomains-top1million-110000.txt);
+        echo $word;
+      end
+      '';
+
+      # domain first arg, IP second
+      enum_subdomains = ''
+        for sub in $(cat $(wordlists_path)/seclists/Discovery/DNS/subdomains-top1million-110000.txt);
+          dig $argv[1].inlanefreight.htb @argv[2] | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;
+        end
+      '';
+
     };
 
     shellAliases = {
