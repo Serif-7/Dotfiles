@@ -244,6 +244,7 @@
       samba4Full
       whatweb # website scanner
       python312Packages.impacket
+      nfs-utils # tools for working with NFS shares
 
       # Reverse Engineering Tools
       binsider
