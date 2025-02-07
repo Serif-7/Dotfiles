@@ -102,6 +102,7 @@
       p7zip
       discord
       krita
+      gedit
 
       # Games
       steam
@@ -127,7 +128,7 @@
       kdePackages.konversation # IRC client
 
       # Color Pickers
-      gpick
+      # gpick
       xcolor
       wl-color-picker
       epick
@@ -231,7 +232,7 @@
       aircrack-ng
       wifite2
       thc-hydra # network logon cracker
-      dsniff # Collection of programs including a TCP sniffer
+      # dsniff # Collection of programs including a TCP sniffer
       ssh-audit # check for SSH vulns
       nikto # web server scanner
       # brutespray # bruteforces services found in nmap data with default creds

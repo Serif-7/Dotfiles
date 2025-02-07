@@ -150,6 +150,14 @@
   # storage device manipulation
   services.udisks2.enable = true;
 
+  ## Virtualization
+  # https://nixos.wiki/wiki/Virt-manager
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["daniel"];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+  # NOTE: The default network starts off as being inactive, you must enable it before it is accessible. This can be done by running the following command: `virsh net-autostart default`
+  # 
 
   # keyboard remapping
   # services.kanata = {

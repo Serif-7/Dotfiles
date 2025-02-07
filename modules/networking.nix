@@ -20,6 +20,8 @@
 
       # HTB
       # "10.10.11.32" = ["sightless.htb" "sqlpad.sightless.htb"];
+      "10.10.11.53" = ["cat.htb"];
+      "10.10.11.28" = ["sea.htb"];
     };
 
     firewall = {
