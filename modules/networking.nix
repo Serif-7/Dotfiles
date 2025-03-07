@@ -6,9 +6,9 @@
 
       #block timewasting sites
       "0.0.0.0" = [
-      # "www.twitter.com" "twitter.com" "www.x.com" "x.com" 
+      "www.twitter.com" "twitter.com" "www.x.com" "x.com" 
       #"www.youtube.com" "youtube.com" 
-      #"www.reddit.com" 
+      # "www.reddit.com" 
       #"www.news.ycombinator" "news.ycombinator.com"
       "www.4channel.org" "www.4chan.org"
       ];

@@ -186,7 +186,7 @@
       docker
       ## Debuggers
       gdb
-      lldb #debugger
+      # lldb #debugger
       delve # go debugger
       direnv
       jq
@@ -225,12 +225,12 @@
       feroxbuster # recursive content discovery tool
       burpsuite
       hashcat
-      john # password cracker
+      # john # password cracker
       metasploit
       exploitdb # searchsploit
       sqlmap
       aircrack-ng
-      wifite2
+      # wifite2
       thc-hydra # network logon cracker
       # dsniff # Collection of programs including a TCP sniffer
       ssh-audit # check for SSH vulns
@@ -241,7 +241,7 @@
       filezilla
       net-snmp
       smbmap
-      netexec # fork of crackmapexec
+      # netexec # fork of crackmapexec
       samba4Full
       whatweb # website scanner
       python312Packages.impacket
