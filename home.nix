@@ -202,6 +202,9 @@
       ruff # Python Linter
       ruff-lsp
 
+      # Web Dev
+      nodejs_23
+
       # Windows Stuff
       wineWowPackages.stable
       winetricks
