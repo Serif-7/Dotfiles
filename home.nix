@@ -80,6 +80,8 @@
       age # encryption tool
       clipboard-jh # Clipboard Manager
       rx # pixel editor
+      borgmatic
+      syncthing
 
       # User Programs
       obsidian
