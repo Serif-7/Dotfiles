@@ -114,6 +114,28 @@
     };
   };
 
+  # Syncthing config
+
+  services.syncthing = {
+    enable = true;
+    systemService = true; # auto-start
+    openDefaultPorts = true;
+    settings = {
+      devices = {
+        "chaucer" = {id = "DOZGJYB-RTA57EL-532SCAU-5ZPAKRA-JX52VKH-FJJVXUJ-DP5HB7M-MH5CSQX"; };
+        # "yeats" = {};
+        # "melville" = {};
+      };
+      folders = {
+        "Documents" = {
+          path = "/home/daniel/Documents";
+          devices = ["chaucer"];
+        };
+      };
+    };
+  };
+
+  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true"; # Don't create default ~/Sync folder
 
   # Fonts
   fonts = {
