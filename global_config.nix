@@ -116,26 +116,27 @@
 
   # Syncthing config
 
-  services.syncthing = {
-    enable = true;
-    systemService = true; # auto-start
-    openDefaultPorts = true;
-    settings = {
-      devices = {
-        "chaucer" = {id = "DOZGJYB-RTA57EL-532SCAU-5ZPAKRA-JX52VKH-FJJVXUJ-DP5HB7M-MH5CSQX"; };
-        # "yeats" = {};
-        # "melville" = {};
-      };
-      folders = {
-        "Documents" = {
-          path = "/home/daniel/Documents";
-          devices = ["chaucer"];
-        };
-      };
-    };
-  };
+  # services.syncthing = {
+  #   enable = true;
+  #   user = "daniel";
+  #   systemService = true; # auto-start
+  #   openDefaultPorts = true;
+  #   settings = {
+  #     devices = {
+  #       "chaucer" = {id = "DOZGJYB-RTA57EL-532SCAU-5ZPAKRA-JX52VKH-FJJVXUJ-DP5HB7M-MH5CSQX"; };
+  #       # "yeats" = {};
+  #       "melville" = {id = "R2L6NI3-MWEJZQY-TWEX2NC-IA2IY27-4IJVUGP-M6YOERD-5YFJUAN-KMCLMAT";};
+  #     };
+  #     folders = {
+  #       "Documents" = {
+  #         path = "/home/daniel/Documents";
+  #         devices = ["chaucer" "melville"];
+  #       };
+  #     };
+  #   };
+  # };
 
-  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true"; # Don't create default ~/Sync folder
+  # systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true"; # Don't create default ~/Sync folder
 
   # Fonts
   fonts = {

@@ -10,6 +10,7 @@
     ./hm_modules/tealdeer.nix
     ./hm_modules/alacritty.nix
     ./hm_modules/zathura.nix
+    ./hm_modules/syncthing.nix
     # ./configs/flameshot.nix
   ];
 
