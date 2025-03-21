@@ -3,9 +3,6 @@
 {
   services.syncthing = {
     enable = true;
-    user = "daniel";
-    systemService = true; # auto-start
-    openDefaultPorts = true;
     settings = {
       devices = {
         chaucer = {
