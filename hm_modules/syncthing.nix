@@ -5,6 +5,7 @@
     enable = true;
     tray.enable = true;
     guiAddress = "127.0.0.1:8384";
+    overrideFolders = false;
     settings = {
       devices = {
         chaucer = {
@@ -42,16 +43,16 @@
             params.cleanoutDays = "1000";
           };
         };
-        "/home/daniel/Videos" = {
-          id = "Videos";
-          
-          devices = ["chaucer" "melville" "yeats"]; # without this, the folder will exist on all devices but not be shared
-          # trashed files stored in .stverions
-          versioning = {
-            type = "trashcan";
-            params.cleanoutDays = "1000";
-          };
-        };
+        # "/home/daniel/Videos" = {
+        #   id = "Videos";
+
+        #   devices = ["chaucer" "melville" "yeats"]; # without this, the folder will exist on all devices but not be shared
+        #   # trashed files stored in .stverions
+        #   versioning = {
+        #     type = "trashcan";
+        #     params.cleanoutDays = "1000";
+        #   };
+        # };
         "/home/daniel/src" = {
           id = "src";
           
