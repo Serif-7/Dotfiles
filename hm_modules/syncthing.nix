@@ -28,7 +28,6 @@
           versioning = {
             type = "trashcan";
             params.cleanoutDays = "1000";
-            };
           };
         };
         "/home/daniel/Pictures" = {
@@ -39,8 +38,8 @@
           versioning = {
             type = "trashcan";
             params.cleanoutDays = "1000";
-            };
           };
+        };
         "/home/daniel/Videos" = {
           id = "Videos";
           
@@ -49,8 +48,8 @@
           versioning = {
             type = "trashcan";
             params.cleanoutDays = "1000";
-            };
           };
+        };
         "/home/daniel/src" = {
           id = "src";
           
@@ -59,8 +58,8 @@
           versioning = {
             type = "trashcan";
             params.cleanoutDays = "1000";
-            };
           };
+        };
         "/home/daniel/Calibre_Library" = {
           id = "Calibre Library";
           
@@ -69,9 +68,9 @@
           versioning = {
             type = "trashcan";
             params.cleanoutDays = "1000";
-            };
           };
-
         };
       };
+    };
+  };
 }
