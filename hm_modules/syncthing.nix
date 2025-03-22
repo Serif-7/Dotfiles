@@ -17,7 +17,49 @@
       folders = {
         "/home/daniel/Documents" = {
           id = "Documents";
-          # devices = ["chaucer"];
+          
+          devices = ["chaucer" "melville"]; # without this, the folder will exist on all devices but not be shared
+          # trashed files stored in .stverions
+          versioning = {
+            type = "trashcan";
+            params.cleanoutDays = "1000";
+            };
+          };
+        };
+        "/home/daniel/Pictures" = {
+          id = "Pictures";
+          
+          devices = ["chaucer" "melville"]; # without this, the folder will exist on all devices but not be shared
+          # trashed files stored in .stverions
+          versioning = {
+            type = "trashcan";
+            params.cleanoutDays = "1000";
+            };
+          };
+        "/home/daniel/Videos" = {
+          id = "Videos";
+          
+          devices = ["chaucer" "melville"]; # without this, the folder will exist on all devices but not be shared
+          # trashed files stored in .stverions
+          versioning = {
+            type = "trashcan";
+            params.cleanoutDays = "1000";
+            };
+          };
+        "/home/daniel/src" = {
+          id = "src";
+          
+          devices = ["chaucer" "melville"]; # without this, the folder will exist on all devices but not be shared
+          # trashed files stored in .stverions
+          versioning = {
+            type = "trashcan";
+            params.cleanoutDays = "1000";
+            };
+          };
+        "/home/daniel/Calibre_Library" = {
+          id = "Calibre Library";
+          
+          devices = ["chaucer" "melville"]; # without this, the folder will exist on all devices but not be shared
           # trashed files stored in .stverions
           versioning = {
             type = "trashcan";
@@ -26,5 +68,4 @@
           };
         };
       };
-    };
 }
