@@ -3,6 +3,7 @@
 {
   services.syncthing = {
     enable = true;
+    guiAddress = "127.0.0.1:8384";
     settings = {
       devices = {
         chaucer = {
@@ -16,12 +17,13 @@
       folders = {
         "/home/daniel/Documents" = {
           id = "Documents";
-          devices = ["chaucer"];
-        };
-      };
-      versioning = {
-        type = "trashcan";
-        params.cleanoutDays = "1000";
+          # devices = ["chaucer"];
+          # trashed files stored in .stverions
+          versioning = {
+            type = "trashcan";
+            params.cleanoutDays = "1000";
+            };
+          };
         };
       };
     };
