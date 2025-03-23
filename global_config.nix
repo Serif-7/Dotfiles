@@ -114,6 +114,9 @@
     };
   };
 
+  # Tailscale config
+  services.tailscale.enable = true;
+
   # Syncthing config
 
   # services.syncthing = {
