@@ -53,7 +53,8 @@
       nixosConfigurations.Melville = nixpkgs.lib.nixosSystem {
         modules = [ 
       
-        ./server_config.nix
+        # ./server_config.nix
+        ./global_config.nix
         ./hosts/Melville/configuration.nix
         ./hm.nix
         ./modules/minecraft.nix
