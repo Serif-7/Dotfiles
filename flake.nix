@@ -58,6 +58,7 @@
         ./hosts/Melville/configuration.nix
         ./hm.nix
         ./modules/minecraft.nix
+        ./modules/seedbox.nix
 
         ];
         specialArgs = { inherit inputs; };
