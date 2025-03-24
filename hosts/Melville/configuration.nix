@@ -70,10 +70,14 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-	git
+  environment.systemPackages = with pkgs; [
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    git
+    jellyfin
+    jellyfin-web
+    jellyfin-ffmpeg
+    
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -87,13 +91,16 @@
   # List services that you want to enable:
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [
-    25565
+    25565 #minecraft port
   ];
   networking.firewall.allowedUDPPorts = [
     25565
   ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # Jellyfin media server config
+  services.jellyfin.enable = true;
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
