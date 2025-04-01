@@ -96,7 +96,7 @@
         };
         lookup-hostnames = false;
         max-sendq = "1M";
-        name = "Melville";
+        name = "melville.com";
         relaymsg = {
           enabled = false;
         };
