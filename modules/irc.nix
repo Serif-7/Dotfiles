@@ -76,7 +76,7 @@
         topiclen = 390;
       };
       network = {
-        name = "testnetwork";
+        name = "Melville";
       };
       server = {
         casemapping = "permissive";
@@ -96,7 +96,7 @@
         };
         lookup-hostnames = false;
         max-sendq = "1M";
-        name = "example.com";
+        name = "Melville";
         relaymsg = {
           enabled = false;
         };

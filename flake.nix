@@ -58,6 +58,7 @@
         ./hosts/Melville/configuration.nix
         ./hm.nix
         ./modules/irc.nix
+        ./modules/matrix.nix
         # ./modules/minecraft.nix
         # ./modules/seedbox.nix
 
