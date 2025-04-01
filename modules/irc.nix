@@ -9,8 +9,8 @@
 
   services.ergochat = {
     enable = true;
-    openFirewall = true;
-    accounts = {
+    settings = {
+      accounts = {
         authentication-enabled = true;
         multiclient = {
           allowed-by-default = true;
@@ -101,6 +101,7 @@
           enabled = false;
         };
       };
+    };
   };
 
 }
