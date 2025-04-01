@@ -56,6 +56,7 @@
       brightnessctl
       cacert
       kanata-with-cmd # keyboard remapping
+      gnome-disk-utility
 
       # Libraries
       SDL2
@@ -83,6 +84,8 @@
       rx # pixel editor
       borgmatic
       syncthing
+      streamrip # rip deezer
+      flac # check flac quality
 
       # User Programs
       obsidian
@@ -125,10 +128,11 @@
         # still fails to build as of 8/06/2024
 
       # Messaging
-      xwaylandvideobridge
+      kdePackages.xwaylandvideobridge
       telegram-desktop
       element-desktop
       kdePackages.konversation # IRC client
+      hexchat
 
       # Color Pickers
       # gpick
@@ -257,7 +261,7 @@
       binsider
       cutter
       imhex # hex editor
-      pwndbg
+      # pwndbg # taken out of main packages, use flake hosted on github instead
     
     ];
 
